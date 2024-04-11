@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "title": "Different title",
+    "imageUrl": "https://images.unsplash.com/photo-1594913495702-0872744c6968?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "content": "Our firm provides comprehensive legal services for commercial property owners, including property tax appeals, lease negotiations, and dispute resolution.",
+    "featured": true,
+    "category": "Kids",
+    "link": "/insurance-defense"
+  },
+  {
+    "id": 2,
+    "title": "Another Announcement 12312312",
+    "imageUrl": "https://images.unsplash.com/photo-1594913495702-0872744c6968?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "featured": true,
+    "category": "Adults",
+    "link": "/insurance-defense"
+  },
+  {
+    "id": 3,
+    "title": "Another Announcement",
+    "imageUrl": "https://images.unsplash.com/photo-1594913495702-0872744c6968?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "featured": false,
+    "category": "Adults",
+    "link": "/insurance-defense"
+  },
+  {
+    "id": 4,
+    "title": "asfasd",
+    "content": "asdfasdf",
+    "imageUrl": "/",
+    "link": "/",
+    "category": "Test"
+  }
+]
