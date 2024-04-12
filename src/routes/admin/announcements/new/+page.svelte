@@ -35,6 +35,8 @@
       category: '',
       featured: false,
     };
+
+    let checked = true;
   
     async function fetchAnnouncement(id: string) {
       const response = await fetch(`/api/announcements/${id}`);
@@ -67,7 +69,7 @@
     });
   </script>
   
-  <div class="mx-auto grid max-w-[59rem] flex-1 auto-rows-max gap-4">
+  <div class="mx-auto grid my-5 max-w-[59rem] flex-1 auto-rows-max gap-4">
     <div class="flex items-center gap-4">
       <h1 class="flex-1 shrink-0 whitespace-nowrap text-xl font-semibold tracking-tight sm:grow-0">
         {announcement.id === 0 ? 'Create Announcement' : 'Edit Announcement'}
@@ -103,10 +105,15 @@
             <Label for="category">Category</Label>
             <Input id="category" type="text" class="w-full" bind:value={announcement.category} />
           </div>
-          <div class="grid gap-3">
-            <Label for="featured">Featured</Label>
-            <Input id="featured" type="checkbox" bind:checked={announcement.featured} />
-          </div>
+          <div class="flex flex-row items-center align-middle gap-3">
+            <Checkbox id="featured" bind:checked={announcement.featured} />
+            <Label
+              for="terms"
+              class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            >
+              Featured Announcement
+            </Label>
+        </div>
         </div>
       </Card.Content>
     </Card.Root>
