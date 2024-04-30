@@ -17,7 +17,7 @@
 <section class="container mx-auto">
     <div class="">
         <div class="container mx-auto flex justify-center flex-col my-16">
-        <h1 class="text-5xl lg:text-8xl font-black tracking-wide max-w-4xl uppercase">A Community Following <span class="text-primary">Jesus</span> Together</h1>
+        <h1 class="text-5xl lg:text-8xl font-black tracking-wide max-w-4xl uppercase">A Community Following<span class="text-primary"> Jesus</span> Together</h1>
         <!-- <p class="text-xl max-w-xl leading-relaxed mb-8">Join us as we draw near to the Lord through worship, prayer, and reflecting on God’s word togther!</p> -->
         <div>
             <!-- <Button variant="outline" class="text-lg mb-0 transition-all duration-300 tracking-wide py-6 font-normal">Join Us Sunday</Button> -->
