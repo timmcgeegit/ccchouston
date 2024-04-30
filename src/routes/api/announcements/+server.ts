@@ -41,8 +41,10 @@ export const PUT: RequestHandler = async ({ request }) => {
   if (index !== -1) {
     announcements[index] = { ...announcements[index], ...updatedAnnouncement };
     await fs.writeFile(filePath, JSON.stringify(announcements, null, 2));
+    return json(updatedAnnouncement, { status: 200 });
+  } else {
+    return json({ message: 'Announcement not found' }, { status: 404 });
   }
-  return json(updatedAnnouncement);
 };
 
 export const DELETE: RequestHandler = async ({ request }) => {

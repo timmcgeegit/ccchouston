@@ -1,18 +1,20 @@
-// src/routes/+page.server.js
+// src/routes/about/+page.server.ts
 import { error } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 import { supabase } from '$lib/supabaseClient';
 
 export const load: PageServerLoad = async () => {
   const { data, error: supabaseError } = await supabase
-    .from('announcements')
+    .from('team')
     .select('*')
-    .eq('featured', true);
+    .order('team_id', { ascending: true });
+    console.log('Fetched team data:', data);
 
   if (supabaseError) {
-    throw error(500, 'Failed to fetch featured announcements');
+    throw error(500, 'Failed to fetch team members');
   }
 
-  return { featuredAnnouncements: data ?? [] };
+  return {
+    teamMembers: data ?? [],
+  };
 };
-

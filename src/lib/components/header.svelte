@@ -1,11 +1,14 @@
+<!-- ccchouston/src/lib/components/header.svelte -->
 <script lang="ts">
     import { Button } from "$lib/components/ui/button";
     import * as Sheet from "$lib/components/ui/sheet";
     import { Menu } from 'lucide-svelte';
     import * as Popover from "$lib/components/ui/popover";
+    
 </script>
 
 <header class="border-b-2">
+
 <nav class="bg-background-alt text-foreground px-4 py-8">
   <div class="container mx-auto flex justify-between items-center">
     <div>
@@ -24,7 +27,7 @@
                 </div>
               </Popover.Content>
               </Popover.Root></li>
-             <li><a href="#" class="text-foreground hover:text-primary active:text-primary">About Us</a></li> 
+             <li><a href="/about" class="text-foreground hover:text-primary active:text-primary">About Us</a></li> 
              <li> <a href="#" class="text-foreground hover:text-primary active:text-primary">Get Involved</a>  </li> 
              <li> <a href="#" class="text-foreground hover:text-primary active:text-primary">Kids & Youth</a></li> 
              <li> <a href="/about" class="text-foreground hover:text-primary active:text-primary">Sermons</a></li> 
@@ -37,14 +40,14 @@
                 <Sheet.Header>
                   <Sheet.Title></Sheet.Title>
                   <Sheet.Description>
-                    <ul class="text-lg">
+                    <ul class="text-lg space-y-3">
                       <li><a href="#" class="text-foreground hover:text-primary active:text-primary">About Us</a></li> 
                       <li> <a href="#" class="text-foreground hover:text-primary active:text-primary">Get Involved</a>  </li> 
                       <li> <a href="#" class="text-foreground hover:text-primary active:text-primary">Kids & Youth</a></li> 
                       <li> <a href="/about" class="text-foreground hover:text-primary active:text-primary">Sermons</a></li> 
                       <li> <a href="#" class="text-foreground hover:text-primary active:text-primary">Give</a></li> 
                     </ul>
-                    <Button href="/contact" class="text transition-all duration-300 hover:shadow-xl tracking-wide py-6 font-normal">Request Consultation</Button>
+                    <Button href="/contact" class="text transition-all duration-300 hover:shadow-xl tracking-wide my-6 py-6 font-normal">Request Consultation</Button>
                     
                   </Sheet.Description>
                 </Sheet.Header>
@@ -53,4 +56,5 @@
           </div> 
   </div>
 </nav>
+
 </header>

@@ -1,4 +1,4 @@
-<!-- ccchouston/src/routes/admin/announcements/+page.svelte -->
+<!-- ccchouston/src/routes/admin/+page.svelte I am providing this as an example of how the connection is currently working correctly. Everything on this page is working -->
 <script lang="ts">
   import File from "lucide-svelte/icons/file";
   import Home from "lucide-svelte/icons/home";
@@ -24,43 +24,78 @@
   import * as Table from "$lib/components/ui/table/index.js";
   import * as Tabs from "$lib/components/ui/tabs/index.js";
   import * as Tooltip from "$lib/components/ui/tooltip/index.js";
-  
 
   import { onMount } from 'svelte';
-  import type { Announcement } from '$lib/types/types';
+  import { supabase } from '$lib/supabaseClient';
+  import type { Announcement } from '$lib/types/announcements';
+  import type { BlogPost } from '$lib/types/blog';
 
+  let activeTab = 'announcements';
   let announcements: Announcement[] = [];
+  let blogPosts: BlogPost[] = [];
 
   async function fetchAnnouncements() {
-    const response = await fetch('/api/announcements');
-    announcements = await response.json();
+    const { data, error } = await supabase
+      .from('announcements')
+      .select('*');
+
+    if (error) {
+      console.error('Error fetching announcements:', error);
+    } else {
+      announcements = data;
+    }
+  }
+
+  async function fetchBlogPosts() {
+    const { data, error } = await supabase
+      .from('blog_posts')
+      .select('*');
+
+    if (error) {
+      console.error('Error fetching blog posts:', error);
+    } else {
+      blogPosts = data;
+    }
   }
 
   async function deleteAnnouncement(id: number) {
-    await fetch(`/api/announcements`, {
-      method: 'DELETE',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ id }),
-    });
-    fetchAnnouncements();
+  const { error } = await supabase.from('announcements').delete().eq('id', id);
+  if (error) {
+    console.error('Error deleting announcement:', error);
+  } else {
+    announcements = announcements.filter((a) => a.id !== id);
+  }
+}
+
+  async function deleteBlogPost(id: number) {
+    const { error } = await supabase
+      .from('blog_posts')
+      .delete()
+      .eq('id', id);
+
+    if (error) {
+      console.error('Error deleting blog post:', error);
+    } else {
+      fetchBlogPosts();
+    }
   }
 
-  onMount(fetchAnnouncements);
+  onMount(() => {
+    fetchAnnouncements();
+    fetchBlogPosts();
+  });
 </script>
 
 <div class="flex min-h-screen w-full flex-col bg-muted/40">
   <!-- ... (sidebar and header code remains the same) ... -->
 
   <main class="grid flex-1 my-5 items-start gap-4 p-4 sm:px-6 sm:py-0 md:gap-8">
-    <Tabs.Root value="all">
+    <Tabs.Root bind:value={activeTab} class="w-full">
       <div class="flex items-center">
-        <Tabs.List>
-          <Tabs.Trigger value="all">All</Tabs.Trigger>
-          <Tabs.Trigger value="active">Active</Tabs.Trigger>
-          <Tabs.Trigger value="draft">Draft</Tabs.Trigger>
-          <Tabs.Trigger value="archived" class="hidden sm:flex">
-            Archived
-          </Tabs.Trigger>
+        <Tabs.List class="grid grid-cols-3">
+          <Tabs.Trigger value="announcements">Announcements</Tabs.Trigger>
+          <Tabs.Trigger value="blogPosts">Blog Posts</Tabs.Trigger>
+          <Tabs.Trigger value="config">Site Config</Tabs.Trigger>
         </Tabs.List>
         <div class="ml-auto flex items-center gap-2">
           <DropdownMenu.Root>
@@ -93,16 +128,29 @@
               Export
             </span>
           </Button>
-          <Button size="sm" class="h-7 gap-1" on:click={() => window.location.href = '/admin/announcements/new'}>
-            <CirclePlus class="h-3.5 w-3.5" />
-            <span class="sr-only sm:not-sr-only sm:whitespace-nowrap">
-              Add Announcement
-            </span>
-            
-          </Button>
+          {#if activeTab === 'announcements'}
+              <Button size="sm" class="h-7 gap-1" on:click={() => {
+                window.location.href = `/admin/announcements/new`;
+              }}>
+                <CirclePlus class="h-3.5 w-3.5" />
+                <span class="sr-only sm:not-sr-only sm:whitespace-nowrap">
+                  Add Announcement
+                </span>
+              </Button>
+          {:else if activeTab === 'blogPosts'}
+            <Button size="sm" class="h-7 gap-1" on:click={() => window.location.href = '/admin/blog/new'}>
+              <CirclePlus class="h-3.5 w-3.5" />
+              <span class="sr-only sm:not-sr-only sm:whitespace-nowrap">
+                Add Blog Post
+              </span>
+            </Button>
+          {:else}
+            <div></div>
+          {/if}
         </div>
       </div>
-      <Tabs.Content value="all">
+
+      <Tabs.Content value="announcements">
         <Card.Root>
           <Card.Header>
             <Card.Title>Announcements</Card.Title>
@@ -120,7 +168,7 @@
                   <Table.Head>Title</Table.Head>
                   <Table.Head>Category</Table.Head>
                   <Table.Head>Featured</Table.Head>
-                  <Table.Head class="hidden md:table-cell">Content</Table.Head>
+                  <Table.Head class="hidden md:table-cell">Description</Table.Head>
                   <Table.Head>
                     <span class="sr-only">Actions</span>
                   </Table.Head>
@@ -134,7 +182,7 @@
                         alt="Announcement image"
                         class="aspect-square rounded-md object-cover"
                         height="64"
-                        src={announcement.imageUrl}
+                        src={announcement.img_square}
                         width="64"
                       />
                     </Table.Cell>
@@ -147,7 +195,7 @@
                         <Badge variant="outline">Regular</Badge>
                       {/if}
                     </Table.Cell>
-                    <Table.Cell class="hidden md:table-cell">{announcement.content}</Table.Cell>
+                    <Table.Cell class="hidden md:table-cell">{announcement.description}</Table.Cell>
                     <Table.Cell>
                       <DropdownMenu.Root>
                         <DropdownMenu.Trigger asChild let:builder>
@@ -180,6 +228,42 @@
           </Card.Footer>
         </Card.Root>
       </Tabs.Content>
+
+      <Tabs.Content value="blogPosts">
+        <Card.Root>
+          <Card.Header>
+            <Card.Title>Blog Posts</Card.Title>
+            <Card.Description>
+              Manage your blog posts and view their details.
+            </Card.Description>
+          </Card.Header>
+          <Card.Content>
+            <Table.Root>
+              <!-- ... (blog posts table code) ... -->
+            </Table.Root>
+          </Card.Content>
+          <Card.Footer>
+            <div class="text-xs text-muted-foreground">
+              Showing <strong>1-{blogPosts.length}</strong> of <strong>{blogPosts.length}</strong> blog posts
+            </div>
+          </Card.Footer>
+        </Card.Root>
+      </Tabs.Content>
+
+      <Tabs.Content value="config">
+        <Card.Root>
+          <Card.Header>
+            <Card.Title>Site Configuration</Card.Title>
+            <Card.Description>
+              Manage your site's configuration settings.
+            </Card.Description>
+          </Card.Header>
+          <Card.Content>
+            <!-- ... (site config form or settings) ... -->
+          </Card.Content>
+        </Card.Root>
+      </Tabs.Content>
     </Tabs.Root>
+   
   </main>
 </div>
