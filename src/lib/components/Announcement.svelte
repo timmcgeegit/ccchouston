@@ -11,7 +11,7 @@
     <a href={announcement.link}>
       <div class="flex flex-col justify-center leading-tight h-full">
         <Card.Header class="pb-2">
-          <Card.Title class="text-2xl tracking-wide">{announcement.title}</Card.Title>
+          <Card.Title class="text-xl tracking-wide">{announcement.title}</Card.Title>
         </Card.Header>
         <Card.Content>
           <p>{announcement.description}</p>
