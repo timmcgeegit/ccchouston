@@ -85,7 +85,7 @@
                 </div>
                 </Accordion.Content>
                 </Accordion.Item>
-                <Accordion.Item value="item-3">
+                <Accordion.Item value="poverty">
                 <Accordion.Trigger class="text-left md:text-xl lg:text-2xl hover:no-underline">Touching the Poor</Accordion.Trigger>
                 <Accordion.Content class="text-md max-w-3xl">
                 <div class="space-y-2">
@@ -95,7 +95,7 @@
                 </div>
                 </Accordion.Content>
                 </Accordion.Item>
-                <Accordion.Item value="item-3">
+                <Accordion.Item value="israel">
                 <Accordion.Trigger class="text-left md:text-xl lg:text-2xl hover:no-underline">Ministry to Israel</Accordion.Trigger>
                 <Accordion.Content class="text-md max-w-3xl">
                 <div class="space-y-2">
