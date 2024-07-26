@@ -1,6 +1,6 @@
 <!-- ccchouston/src/routes/+layout.svelte -->
 <script>import "../app.pcss";
-import Header from "$lib/components/header.svelte";
+import Header from "$lib/components/Header.svelte";
 import Topbar from "$lib/components/topbar.svelte";
 // import isLoggedIn from '$lib/components/admin/Login.svelte';
 import { Badge } from "$lib/components/ui/badge";

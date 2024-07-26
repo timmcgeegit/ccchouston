@@ -171,17 +171,6 @@
         
     </section>
 
-    <section class="container mx-auto my-24">
-        <h2 class="text-5xl font-black mb-4">Adult Ministry Announcements</h2>
-        <div class="w-12 h-1 bg-primary mb-4"></div>
-        <p class="text-xl max-w-xl leading-relaxed mb-8">Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</p>
-        <div class="grid grid-cols-1 md:min-h-32 md:grid-cols-2 lg:grid-cols-4 gap-3">
-            {#each data.featuredAnnouncements as announcement}
-            <Announcement {announcement} />
-          {/each}
-        </div>
-      </section>
-
 
 
 

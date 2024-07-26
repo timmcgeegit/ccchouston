@@ -38,7 +38,7 @@
                     <a href="/adults" class="mx-4 text-foreground hover:text-primary active:text-primary transition-all duration-300">Adult Ministries</a>
                     <a href="/kids" class="mx-4 text-foreground hover:text-primary active:text-primary transition-all duration-300">Kids Ministry</a>
                     <a href="/youth" class="mx-4 text-foreground hover:text-primary active:text-primary transition-all duration-300">Youth Ministry</a>  
-                    <a href="/serve" class="mx-4 text-foreground hover:text-primary active:text-primary transition-all duration-300">Serve</a>  
+                    <!-- <a href="/serve" class="mx-4 text-foreground hover:text-primary active:text-primary transition-all duration-300">Serve</a>   -->
                     <a href="/missions" class="mx-4 text-foreground hover:text-primary active:text-primary transition-all duration-300">Missions</a>  
                     <a href="/calendar" class="mx-4 text-foreground hover:text-primary active:text-primary transition-all duration-300">Calendar</a>  
                   </div>

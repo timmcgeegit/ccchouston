@@ -89,7 +89,8 @@
       </div>
     </div>
     <div class="flex flex-col md:flex-row justify-center mt-24 gap-6">
-    <Button class="text-lg mb-0 transition-all duration-300 tracking-wide py-6 font-normal">See what's happening</Button>
+    <Button class="text-lg mb-0 transition-all duration-300 tracking-wide py-6 font-normal">Next Steps</Button>
+    <Button href="/calendar" variant="outline" class="text-lg mb-0 transition-all duration-300 tracking-wide py-6 font-normal">Calendar</Button>
     </div>
     </div>
   </section>
