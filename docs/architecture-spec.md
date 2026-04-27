@@ -18,29 +18,29 @@ This is a real client project. Senior pastor is Tim's dad. Goal is to ship as so
 
 ## 2. Technology Stack
 
-| Layer | Choice |
-|---|---|
-| Framework | SvelteKit |
-| Styling | Tailwind CSS + CSS custom properties |
-| UI primitives | shadcn-svelte (pruned to what's actually used) |
-| Hosting | Vercel |
-| Database | Neon Postgres (Lumis CMS pattern) |
-| Media / file storage | Cloudflare R2 |
-| Auth (target) | Better Auth (Lumis CMS pattern, possibly improved) |
-| Forms (v1) | None native — Shelby forms continue until post-launch migration |
-| Email | Resend (when forms move off Shelby) |
-| Sermons audio | Native HTML5 player serving direct `.mp3` files. Editors upload mp3s manually for v1; investigate whether the Spotify/Anchor API exposes a direct mp3 download path to automate the workflow. **Anchor Episodes Index plugin is explicitly being replaced** — current pattern is a stopgap the church got comfortable with; redesign forces the migration. |
-| Sermons video | YouTube (default). Vimeo support deferred — current Vimeo plugin in WP is not a target pattern. |
-| Sermon distribution | Apple Podcasts `id1498520795`, Spotify `show/0R5AY6E44E3ffa5YhQ3Uz3` — surface as links from `/sermons` |
-| Calendar (current + v1) | Shelby (linked / embedded). Custom UI deferred post-launch |
-| Forms backend (v1) | **Default to Shelby for all forms.** The church is currently moving to Shelby, so all forms ship as Shelby embeds/links. After launch we pitch them on Lumis-native forms. Gravity / Ninja in WP are migration noise, not a target pattern. |
-| Giving | Shelby Giving (`shelbygiving.com`) — `/give` deep-links here, per-missionary giving links also point here |
-| Newsletter (current) | Constant Contact (`visitor.r20.constantcontact.com`). Replace with Resend post-launch |
-| Maps | Google Maps embed on `/plan-visit` |
-| Shop / merch | **Likely killed.** WooCommerce + Printful is in WP but church may have already moved to Shopify and may not actively use it. Confirm with staff before launch — default plan is no shop, link out to Shopify if they have one. |
-| Source CMS | WordPress on WP Engine. SSH access via `~/.ssh/wpengine_ed25519` as `calvaryhouston@calvaryhouston.ssh.wpengine.net`. **Migration is intentionally manual / AI-assisted** — Tim is rewriting copy per page in the redesign, not bulk-importing. WP-CLI is used for inventory, not extraction. ACF field dumps and Gutenberg block unwrap are *not* needed for v1. |
-| Domain | calvaryhouston.com (existing — DNS cutover at launch) |
-| Analytics | TBD |
+| Layer                   | Choice                                                                                                                                                                                                                                                                                                                                                            |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Framework               | SvelteKit                                                                                                                                                                                                                                                                                                                                                         |
+| Styling                 | Tailwind CSS + CSS custom properties                                                                                                                                                                                                                                                                                                                              |
+| UI primitives           | shadcn-svelte (pruned to what's actually used)                                                                                                                                                                                                                                                                                                                    |
+| Hosting                 | Vercel                                                                                                                                                                                                                                                                                                                                                            |
+| Database                | Neon Postgres (Lumis CMS pattern)                                                                                                                                                                                                                                                                                                                                 |
+| Media / file storage    | Cloudflare R2                                                                                                                                                                                                                                                                                                                                                     |
+| Auth (target)           | Better Auth (Lumis CMS pattern, possibly improved)                                                                                                                                                                                                                                                                                                                |
+| Forms (v1)              | None native — Shelby forms continue until post-launch migration                                                                                                                                                                                                                                                                                                   |
+| Email                   | Resend (when forms move off Shelby)                                                                                                                                                                                                                                                                                                                               |
+| Sermons audio           | Native HTML5 player serving direct `.mp3` files. Editors upload mp3s manually for v1; investigate whether the Spotify/Anchor API exposes a direct mp3 download path to automate the workflow. **Anchor Episodes Index plugin is explicitly being replaced** — current pattern is a stopgap the church got comfortable with; redesign forces the migration.        |
+| Sermons video           | YouTube (default). Vimeo support deferred — current Vimeo plugin in WP is not a target pattern.                                                                                                                                                                                                                                                                   |
+| Sermon distribution     | Apple Podcasts `id1498520795`, Spotify `show/0R5AY6E44E3ffa5YhQ3Uz3` — surface as links from `/sermons`                                                                                                                                                                                                                                                           |
+| Calendar (current + v1) | Shelby (linked / embedded). Custom UI deferred post-launch                                                                                                                                                                                                                                                                                                        |
+| Forms backend (v1)      | **Default to Shelby for all forms.** The church is currently moving to Shelby, so all forms ship as Shelby embeds/links. After launch we pitch them on Lumis-native forms. Gravity / Ninja in WP are migration noise, not a target pattern.                                                                                                                       |
+| Giving                  | Shelby Giving (`shelbygiving.com`) — `/give` deep-links here, per-missionary giving links also point here                                                                                                                                                                                                                                                         |
+| Newsletter (current)    | Constant Contact (`visitor.r20.constantcontact.com`). Replace with Resend post-launch                                                                                                                                                                                                                                                                             |
+| Maps                    | Google Maps embed on `/plan-visit`                                                                                                                                                                                                                                                                                                                                |
+| Shop / merch            | **Likely killed.** WooCommerce + Printful is in WP but church may have already moved to Shopify and may not actively use it. Confirm with staff before launch — default plan is no shop, link out to Shopify if they have one.                                                                                                                                    |
+| Source CMS              | WordPress on WP Engine. SSH access via `~/.ssh/wpengine_ed25519` as `calvaryhouston@calvaryhouston.ssh.wpengine.net`. **Migration is intentionally manual / AI-assisted** — Tim is rewriting copy per page in the redesign, not bulk-importing. WP-CLI is used for inventory, not extraction. ACF field dumps and Gutenberg block unwrap are _not_ needed for v1. |
+| Domain                  | calvaryhouston.com (existing — DNS cutover at launch)                                                                                                                                                                                                                                                                                                             |
+| Analytics               | TBD                                                                                                                                                                                                                                                                                                                                                               |
 
 ---
 
@@ -72,43 +72,43 @@ Social, copyright, legal links (privacy, terms — likely linked but ship as lat
 
 ### Routes
 
-| Route | v1 priority | Type | Notes |
-|---|---|---|---|
-| `/` | P0 | Custom | Homepage |
-| `/about` | P0 | Custom | About + team + vision |
-| `/kids` | P0 | Ministry template | |
-| `/youth` | P0 | Ministry template | Currently a copy of /kids — needs real content |
-| `/adults` | P0 | Ministry template | Has best content already |
-| `/missions` | P0 | Ministry template variant | Most content-rich; no announcement grid currently |
-| `/serve` | P0 | Ministry template | Currently a copy of /adults — needs real content |
-| `/sermons` | P0 | Custom | New build: native mp3 audio + YouTube video, full-text search across transcripts/notes |
-| `/sermons/[slug]` | P0 | Detail | Tabbed: Video / Audio / Notes / Transcript |
-| `/give` | P0 | Custom | Clean page that routes people to existing processor |
-| `/contact` | P0 | Page | Shelby form embed for v1; replace later |
-| `/calendar` | P1 | Link/embed | Links/embeds Shelby calendar for v1. Custom UI deferred |
-| `/announcements` | P0 | Index | Filterable list view |
-| `/blog` | P0 | Index + post | **More active than initially scoped.** WP source has 235 posts including annual recurring devotional series (First Love Fast). Treat as a real publishing surface, not a backwater. |
-| `/blog/[slug]` | P0 | Post | |
-| `/plan-visit` | P0 | Custom | |
-| `/our-history` | P0 | Page | Standalone, not folded into About |
-| `/become-a-member` | P0 | Custom | Discover Calvary class funnel — critical conversion route |
-| `/journey-groups` | P0 | Custom | Top-level small groups page (Calvary calls this "the heartbeat") |
-| `/ladies` | P0 | Ministry template variant | Women's ministry — retreat, Delight Nights, Bible study |
-| `/local-missions` | P0 | Custom | Distinct from `/missions` (Hairgrove Partnership, etc.) |
-| `/prayer-room` | P0 | Page | Physical prayer room with weekly schedule grid (≠ /prayer-request) |
-| `/staff` | P0 | Index | Standalone team directory, separate from /about |
-| `/sermons/series/[slug]` | P1 | Detail | Sermon series landing page |
-| `/missions-partners` | P1 | Index | Ministry partner directory grouped by focus |
-| `/resources` | P1 | Index | Content library (PDFs, books, fasting materials, recommended reading) |
-| `/ministry-team-training` | P1 | Page | Equipping/leadership development |
-| `/prayer-request` | P1 | Redirect → Shelby | Real page later |
-| `/connect-card` | P1 | Redirect → Shelby | Real page later |
-| `/join-online` | P1 | Custom | Online streaming page |
-| `/memorial-services` | P1 | Page | Existing WP page (id 11017) — low-traffic but real |
-| `/what-we-believe` | P1 | Page | WP draft (id 2925) — finish writing as part of v1 |
-| `/shop` | — | Likely killed | WooCommerce + Printful in WP but probably abandoned. Confirm with staff; default = no shop or external link |
-| `/privacy-policy` | P2 | Page | |
-| `/terms-of-service` | P2 | Page | |
+| Route                     | v1 priority | Type                      | Notes                                                                                                                                                                               |
+| ------------------------- | ----------- | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `/`                       | P0          | Custom                    | Homepage                                                                                                                                                                            |
+| `/about`                  | P0          | Custom                    | About + team + vision                                                                                                                                                               |
+| `/kids`                   | P0          | Ministry template         |                                                                                                                                                                                     |
+| `/youth`                  | P0          | Ministry template         | Currently a copy of /kids — needs real content                                                                                                                                      |
+| `/adults`                 | P0          | Ministry template         | Has best content already                                                                                                                                                            |
+| `/missions`               | P0          | Ministry template variant | Most content-rich; no announcement grid currently                                                                                                                                   |
+| `/serve`                  | P0          | Ministry template         | Currently a copy of /adults — needs real content                                                                                                                                    |
+| `/sermons`                | P0          | Custom                    | New build: native mp3 audio + YouTube video, full-text search across transcripts/notes                                                                                              |
+| `/sermons/[slug]`         | P0          | Detail                    | Tabbed: Video / Audio / Notes / Transcript                                                                                                                                          |
+| `/give`                   | P0          | Custom                    | Clean page that routes people to existing processor                                                                                                                                 |
+| `/contact`                | P0          | Page                      | Shelby form embed for v1; replace later                                                                                                                                             |
+| `/calendar`               | P1          | Link/embed                | Links/embeds Shelby calendar for v1. Custom UI deferred                                                                                                                             |
+| `/announcements`          | P0          | Index                     | Filterable list view                                                                                                                                                                |
+| `/blog`                   | P0          | Index + post              | **More active than initially scoped.** WP source has 235 posts including annual recurring devotional series (First Love Fast). Treat as a real publishing surface, not a backwater. |
+| `/blog/[slug]`            | P0          | Post                      |                                                                                                                                                                                     |
+| `/plan-visit`             | P0          | Custom                    |                                                                                                                                                                                     |
+| `/our-history`            | P0          | Page                      | Standalone, not folded into About                                                                                                                                                   |
+| `/become-a-member`        | P0          | Custom                    | Discover Calvary class funnel — critical conversion route                                                                                                                           |
+| `/journey-groups`         | P0          | Custom                    | Top-level small groups page (Calvary calls this "the heartbeat")                                                                                                                    |
+| `/ladies`                 | P0          | Ministry template variant | Women's ministry — retreat, Delight Nights, Bible study                                                                                                                             |
+| `/local-missions`         | P0          | Custom                    | Distinct from `/missions` (Hairgrove Partnership, etc.)                                                                                                                             |
+| `/prayer-room`            | P0          | Page                      | Physical prayer room with weekly schedule grid (≠ /prayer-request)                                                                                                                  |
+| `/staff`                  | P0          | Index                     | Standalone team directory, separate from /about                                                                                                                                     |
+| `/sermons/series/[slug]`  | P1          | Detail                    | Sermon series landing page                                                                                                                                                          |
+| `/missions-partners`      | P1          | Index                     | Ministry partner directory grouped by focus                                                                                                                                         |
+| `/resources`              | P1          | Index                     | Content library (PDFs, books, fasting materials, recommended reading)                                                                                                               |
+| `/ministry-team-training` | P1          | Page                      | Equipping/leadership development                                                                                                                                                    |
+| `/prayer-request`         | P1          | Redirect → Shelby         | Real page later                                                                                                                                                                     |
+| `/connect-card`           | P1          | Redirect → Shelby         | Real page later                                                                                                                                                                     |
+| `/join-online`            | P1          | Custom                    | Online streaming page                                                                                                                                                               |
+| `/memorial-services`      | P1          | Page                      | Existing WP page (id 11017) — low-traffic but real                                                                                                                                  |
+| `/what-we-believe`        | P1          | Page                      | WP draft (id 2925) — finish writing as part of v1                                                                                                                                   |
+| `/shop`                   | —           | Likely killed             | WooCommerce + Printful in WP but probably abandoned. Confirm with staff; default = no shop or external link                                                                         |
+| `/privacy-policy`         | P2          | Page                      |                                                                                                                                                                                     |
+| `/terms-of-service`       | P2          | Page                      |                                                                                                                                                                                     |
 
 ### Routes to kill / clean up
 
@@ -140,6 +140,7 @@ The template should be a real Svelte component (`<MinistryPage>`) that takes its
 Used by: `/about`, `/plan-visit`, `/give`, `/sermons`, `/contact`, `/blog/[slug]`, future content pages.
 
 Looser template — flexible composition of the design system's section primitives:
+
 - Hero
 - Image-with-text section
 - Offset-card feature
@@ -171,29 +172,30 @@ Central content type. Filters away the noise of "everything in the calendar."
 
 ```ts
 type Announcement = {
-  id: string;                       // uuid
-  title: string;
-  description: string;
-  img_square: string | null;        // editor uploads; alt_text REQUIRED
-  img_16x9: string | null;
-  alt_text: string;                 // REQUIRED for accessibility
-  optional_overlay_title?: string;  // for graphics-with-baked-in-text — see §7 hover behavior
-  category: string;                 // vocabulary TBD (open question)
-  scope: 'site' | 'ministry';       // site = homepage / global; ministry = audience-segmented
-  ministry_keys?: string[];         // when scope=ministry, which pages it shows on
-  priority: 'normal' | 'urgent';    // urgent = "super important" filter (cancellations etc.)
-  link_type: 'standalone' | 'blog_post' | 'event' | 'external';
-  link_target: string;              // url or internal slug
-  starts_at: string | null;         // for time-bounded announcements
-  ends_at: string | null;
-  sort_order: number | null;        // manual sort within scope/category
-  featured: boolean;                // homepage featured grid
-  created_at: string;
-  updated_at: string;
+	id: string; // uuid
+	title: string;
+	description: string;
+	img_square: string | null; // editor uploads; alt_text REQUIRED
+	img_16x9: string | null;
+	alt_text: string; // REQUIRED for accessibility
+	optional_overlay_title?: string; // for graphics-with-baked-in-text — see §7 hover behavior
+	category: string; // vocabulary TBD (open question)
+	scope: 'site' | 'ministry'; // site = homepage / global; ministry = audience-segmented
+	ministry_keys?: string[]; // when scope=ministry, which pages it shows on
+	priority: 'normal' | 'urgent'; // urgent = "super important" filter (cancellations etc.)
+	link_type: 'standalone' | 'blog_post' | 'event' | 'external';
+	link_target: string; // url or internal slug
+	starts_at: string | null; // for time-bounded announcements
+	ends_at: string | null;
+	sort_order: number | null; // manual sort within scope/category
+	featured: boolean; // homepage featured grid
+	created_at: string;
+	updated_at: string;
 };
 ```
 
 **Decided:**
+
 - `scope` is a fixed enum (`site` | `ministry`)
 - `ministry_keys[]` is a multi-select from a fixed list (kids, youth, adults, missions, serve, women, men, prayer, etc.)
 - `tags[]` is free-form for cross-cutting topics (advent, easter, back-to-school)
@@ -205,21 +207,21 @@ type Announcement = {
 
 ```ts
 type Sermon = {
-  id: string;
-  title: string;
-  speaker_id: string;               // FK → Speaker (not just a name string — see Speaker below)
-  series_id: string | null;         // FK → SermonSeries (optional — not always used)
-  preached_at: string;
-  audio_url: string | null;         // direct mp3, served natively (not embedded)
-  video_url: string;                // YouTube
-  transcript: string | null;        // markdown or HTML
-  notes: string | null;             // markdown or HTML
-  notes_pdf_url: string | null;     // optional downloadable PDF asset
-  scripture_refs: string[];
-  tags: string[];
-  search_text: string;              // generated: title + speaker + scripture + transcript + notes for full-text search
-  created_at: string;
-  updated_at: string;
+	id: string;
+	title: string;
+	speaker_id: string; // FK → Speaker (not just a name string — see Speaker below)
+	series_id: string | null; // FK → SermonSeries (optional — not always used)
+	preached_at: string;
+	audio_url: string | null; // direct mp3, served natively (not embedded)
+	video_url: string; // YouTube
+	transcript: string | null; // markdown or HTML
+	notes: string | null; // markdown or HTML
+	notes_pdf_url: string | null; // optional downloadable PDF asset
+	scripture_refs: string[];
+	tags: string[];
+	search_text: string; // generated: title + speaker + scripture + transcript + notes for full-text search
+	created_at: string;
+	updated_at: string;
 };
 ```
 
@@ -227,16 +229,16 @@ type Sermon = {
 
 ```ts
 type SermonSeries = {
-  id: string;
-  slug: string;
-  title: string;
-  description: string;
-  art_url: string;                  // series artwork
-  alt_text: string;
-  starts_at: string;
-  ends_at: string | null;
-  primary_speaker_id: string | null;
-  created_at: string;
+	id: string;
+	slug: string;
+	title: string;
+	description: string;
+	art_url: string; // series artwork
+	alt_text: string;
+	starts_at: string;
+	ends_at: string | null;
+	primary_speaker_id: string | null;
+	created_at: string;
 };
 ```
 
@@ -244,13 +246,13 @@ type SermonSeries = {
 
 ```ts
 type Speaker = {
-  id: string;
-  name: string;
-  is_staff: boolean;                // staff preachers vs. visiting/missionary speakers
-  team_member_id: string | null;    // FK → TeamMember when is_staff
-  bio: string | null;               // for non-staff speakers (visiting, missionaries)
-  image_url: string | null;
-  alt_text: string | null;
+	id: string;
+	name: string;
+	is_staff: boolean; // staff preachers vs. visiting/missionary speakers
+	team_member_id: string | null; // FK → TeamMember when is_staff
+	bio: string | null; // for non-staff speakers (visiting, missionaries)
+	image_url: string | null;
+	alt_text: string | null;
 };
 ```
 
@@ -264,18 +266,18 @@ type Speaker = {
 
 ```ts
 type BlogPost = {
-  id: string;
-  slug: string;
-  title: string;
-  subtitle: string | null;
-  body: string;                     // markdown
-  category: 'ministry' | 'events' | 'testimonials';
-  author: string;
-  hero_image: string | null;
-  alt_text: string;                 // REQUIRED
-  published_at: string | null;
-  created_at: string;
-  updated_at: string;
+	id: string;
+	slug: string;
+	title: string;
+	subtitle: string | null;
+	body: string; // markdown
+	category: 'ministry' | 'events' | 'testimonials';
+	author: string;
+	hero_image: string | null;
+	alt_text: string; // REQUIRED
+	published_at: string | null;
+	created_at: string;
+	updated_at: string;
 };
 ```
 
@@ -283,19 +285,19 @@ type BlogPost = {
 
 ```ts
 type TeamMember = {
-  id: string;
-  slug: string;                     // for future detail page
-  name: string;
-  position: string;
-  image: string;
-  alt_text: string;                 // REQUIRED
-  bio: string | null;               // markdown or sanitized HTML
-  phone_extension: string | null;   // e.g., "108" — Calvary uses extensions for direct staff contact
-  email: string | null;
-  ministry_keys: string[];          // which ministries they're tied to
-  sort_order: number;               // drag-and-drop in admin, persists numeric
-  active: boolean;
-  created_at: string;
+	id: string;
+	slug: string; // for future detail page
+	name: string;
+	position: string;
+	image: string;
+	alt_text: string; // REQUIRED
+	bio: string | null; // markdown or sanitized HTML
+	phone_extension: string | null; // e.g., "108" — Calvary uses extensions for direct staff contact
+	email: string | null;
+	ministry_keys: string[]; // which ministries they're tied to
+	sort_order: number; // drag-and-drop in admin, persists numeric
+	active: boolean;
+	created_at: string;
 };
 ```
 
@@ -310,6 +312,7 @@ When built: list view as primary (mobile-friendly default), month view secondary
 ### Special Events — no dedicated content type
 
 Events do **not** get their own content type for v1. Pattern instead:
+
 - An "event callout" or "feature section" gets manually added to the relevant ministry page (e.g., the offset-card "Special Event" block already on every ministry template).
 - The callout's link points to one of: a blog post (writeup), a Shelby event/registration page, or any other internal/external URL.
 - Recurring large events (Summer Blast, First Love Fast, Discover Calvary) get a blog post per occurrence and the ministry page links to the latest.
@@ -322,14 +325,14 @@ For things like Prayer Room hours (Mon 9-7, Tue 11-1, Thu 6-noon).
 
 ```ts
 type ScheduleBlock = {
-  id: string;
-  parent_type: 'prayer_room' | 'kids_club' | 'ministry' | 'custom';
-  parent_id: string;
-  day_of_week: 0 | 1 | 2 | 3 | 4 | 5 | 6;
-  starts_at_time: string;           // "09:00"
-  ends_at_time: string;             // "19:00"
-  label: string | null;             // "Open prayer", "Worship-led prayer"
-  active: boolean;
+	id: string;
+	parent_type: 'prayer_room' | 'kids_club' | 'ministry' | 'custom';
+	parent_id: string;
+	day_of_week: 0 | 1 | 2 | 3 | 4 | 5 | 6;
+	starts_at_time: string; // "09:00"
+	ends_at_time: string; // "19:00"
+	label: string | null; // "Open prayer", "Worship-led prayer"
+	active: boolean;
 };
 ```
 
@@ -337,17 +340,17 @@ type ScheduleBlock = {
 
 ```ts
 type Missionary = {
-  id: string;
-  slug: string;                     // for future detail page
-  name: string;
-  region: string;                   // "Kansas City", "Europe", etc.
-  sending_org: string | null;       // "Release the Kingdom", "IHOPKC"
-  bio: string;
-  image_url: string | null;
-  alt_text: string;
-  giving_url: string;               // Shelby giving link, per-missionary
-  active: boolean;
-  sort_order: number;
+	id: string;
+	slug: string; // for future detail page
+	name: string;
+	region: string; // "Kansas City", "Europe", etc.
+	sending_org: string | null; // "Release the Kingdom", "IHOPKC"
+	bio: string;
+	image_url: string | null;
+	alt_text: string;
+	giving_url: string; // Shelby giving link, per-missionary
+	active: boolean;
+	sort_order: number;
 };
 ```
 
@@ -357,15 +360,21 @@ type Missionary = {
 
 ```ts
 type MinistryPartner = {
-  id: string;
-  name: string;
-  category: 'prayer' | 'compassion' | 'disaster_relief' | 'church_planting' | 'evangelism' | 'other';
-  region: 'local' | 'national' | 'global';
-  description: string;
-  external_url: string;
-  logo_url: string | null;
-  alt_text: string | null;
-  sort_order: number;
+	id: string;
+	name: string;
+	category:
+		| 'prayer'
+		| 'compassion'
+		| 'disaster_relief'
+		| 'church_planting'
+		| 'evangelism'
+		| 'other';
+	region: 'local' | 'national' | 'global';
+	description: string;
+	external_url: string;
+	logo_url: string | null;
+	alt_text: string | null;
+	sort_order: number;
 };
 ```
 
@@ -375,25 +384,26 @@ For the `/resources` content library (PDFs, books, fasting materials, recommende
 
 ```ts
 type Resource = {
-  id: string;
-  slug: string;
-  title: string;
-  description: string;
-  category: 'book' | 'pdf' | 'video' | 'external_link' | 'audio';
-  asset_url: string;                // R2 URL for PDFs/audio, external for links
-  cover_image: string | null;
-  alt_text: string | null;
-  price: string | null;             // null = free, otherwise display string
-  recommended_by: string | null;    // staff member who recommended
-  tags: string[];
-  active: boolean;
-  sort_order: number;
+	id: string;
+	slug: string;
+	title: string;
+	description: string;
+	category: 'book' | 'pdf' | 'video' | 'external_link' | 'audio';
+	asset_url: string; // R2 URL for PDFs/audio, external for links
+	cover_image: string | null;
+	alt_text: string | null;
+	price: string | null; // null = free, otherwise display string
+	recommended_by: string | null; // staff member who recommended
+	tags: string[];
+	active: boolean;
+	sort_order: number;
 };
 ```
 
 ### Site Settings
 
 All editable from the admin:
+
 - Service times (display string, e.g., "Sundays 9 AM + 10:30 AM")
 - Address / city
 - Phone number
@@ -409,13 +419,13 @@ All editable from the admin:
 
 ```ts
 type NavItem = {
-  id: string;
-  scope: 'primary' | 'topbar' | 'mobile' | 'footer';
-  parent_id: string | null;        // for dropdown children
-  label: string;
-  href: string;
-  sort_order: number;
-  visible: boolean;
+	id: string;
+	scope: 'primary' | 'topbar' | 'mobile' | 'footer';
+	parent_id: string | null; // for dropdown children
+	label: string;
+	href: string;
+	sort_order: number;
+	visible: boolean;
 };
 ```
 
@@ -431,18 +441,19 @@ Teal — `187 30% 42%` (current `--primary`). All UI accents derive from this. N
 
 Move from ad-hoc `text-5xl lg:text-8xl` to a formal scale defined in `tailwind.config.js`:
 
-| Token | Mobile | Desktop | Use |
-|---|---|---|---|
-| `display` | `text-5xl` | `text-7xl lg:text-8xl` | Page heroes (h1) — uppercase, font-black |
-| `h1` | `text-4xl` | `text-5xl` | Standard h1 (when hero is a graphic) |
-| `h2` | `text-3xl` | `text-4xl lg:text-5xl` | Section titles |
-| `h3` | `text-2xl` | `text-3xl` | Subsections |
-| `h4` | `text-xl` | `text-2xl` | Card titles, accordion triggers |
-| `lead` | `text-lg` | `text-xl` | Hero subtitles, intro paragraphs |
-| `body` | `text-base` | `text-lg` | Default paragraph |
-| `caption` | `text-sm` | `text-sm` | Meta info, captions |
+| Token     | Mobile      | Desktop                | Use                                      |
+| --------- | ----------- | ---------------------- | ---------------------------------------- |
+| `display` | `text-5xl`  | `text-7xl lg:text-8xl` | Page heroes (h1) — uppercase, font-black |
+| `h1`      | `text-4xl`  | `text-5xl`             | Standard h1 (when hero is a graphic)     |
+| `h2`      | `text-3xl`  | `text-4xl lg:text-5xl` | Section titles                           |
+| `h3`      | `text-2xl`  | `text-3xl`             | Subsections                              |
+| `h4`      | `text-xl`   | `text-2xl`             | Card titles, accordion triggers          |
+| `lead`    | `text-lg`   | `text-xl`              | Hero subtitles, intro paragraphs         |
+| `body`    | `text-base` | `text-lg`              | Default paragraph                        |
+| `caption` | `text-sm`   | `text-sm`              | Meta info, captions                      |
 
 **SEO/accessibility correction:** the homepage hero text is currently an h1 but reads as a tagline ("A Community Following Jesus Together"). Either:
+
 - (a) Keep it as the h1 but add a hidden semantic h1 for SEO with the actual page title, OR
 - (b) Move the tagline to a div styled at display scale and put the real h1 (e.g., "Calvary Community Church Houston") elsewhere on the page
 
@@ -477,6 +488,7 @@ Defined in `src/app.pcss`. Keep light-mode tokens. **Kill dark mode** — remove
 Recommendation: **make it a Svelte component**, not a Tailwind utility.
 
 Rationale:
+
 - It's not just spacing — it's a multi-element pattern (outer primary-bg div, inner offset image div, gradient overlay child). A utility class can't express the structure.
 - Components compose better with the future CMS — editors pick a layout block by name, not by remembering a class.
 - Tailwind utilities are best for atomic styling decisions. Composite patterns belong in components.
@@ -484,10 +496,10 @@ Rationale:
 ```svelte
 <!-- $lib/components/design/OffsetCard.svelte -->
 <script>
-  export let imageUrl;
-  export let altText;
-  export let direction = 'br'; // 'tl' | 'tr' | 'bl' | 'br'
-  export let aspect = 'lg:aspect-[4/4]'; // override via prop
+	export let imageUrl;
+	export let altText;
+	export let direction = 'br'; // 'tl' | 'tr' | 'bl' | 'br'
+	export let aspect = 'lg:aspect-[4/4]'; // override via prop
 </script>
 ```
 
@@ -498,6 +510,7 @@ Use it on home, about, all ministry pages. Eliminates the inconsistency in offse
 Current behavior: title + description appear on hover only.
 
 Updated behavior:
+
 - **Optional** `optional_overlay_title` field on Announcement
 - If set: title is rendered visibly over the image (with a readability gradient) before hover. Hover reveals description.
 - If not set: existing behavior (title appears on hover)
@@ -512,6 +525,7 @@ Current cards have placeholder legal-services copy and don't fit the church cont
 ### Mobile / hamburger nav → full redesign
 
 Current implementation uses `Sheet.Description` for nav content (semantic mismatch) and has dead `#` links. Rebuild as a proper drawer with:
+
 - Full nav structure (primary + topbar combined)
 - Smooth open/close animation
 - Closes on link click
@@ -524,6 +538,7 @@ Current implementation uses `Sheet.Description` for nav content (semantic mismat
 ### Voice + tone (TBD — to be built)
 
 Editorial style guide will be co-created. Source material for voice:
+
 - Sermon transcripts
 - Senior pastor letters
 - Other church communications

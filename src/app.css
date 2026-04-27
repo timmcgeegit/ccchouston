@@ -1,0 +1,65 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@theme {
+	--color-background: hsl(32 40% 98.2%);
+	--color-foreground: hsl(240 12% 4%);
+
+	--color-muted: hsl(32 30% 95%);
+	--color-muted-lighter: hsl(32 30% 96.2%);
+	--color-muted-darker: hsl(32 30% 68%);
+	--color-muted-foreground: hsl(240 3.8% 46.1%);
+
+	--color-popover: hsl(0 0% 100%);
+	--color-popover-foreground: hsl(240 10% 3.9%);
+
+	--color-card: hsl(0 0% 100%);
+	--color-card-foreground: hsl(240 10% 3.9%);
+
+	--color-border: hsl(240 5.9% 90%);
+	--color-input: hsl(240 5.9% 90%);
+
+	--color-primary: hsl(187 30% 42%);
+	--color-primary-100: hsl(186 30% 76%);
+	--color-primary-foreground: hsl(0 0% 98%);
+
+	--color-secondary: hsl(240 4.8% 95.9%);
+	--color-secondary-foreground: hsl(240 5.9% 10%);
+
+	--color-accent: hsl(240 4.8% 95.9%);
+	--color-accent-foreground: hsl(240 5.9% 10%);
+
+	--color-destructive: hsl(0 84.2% 60.2%);
+	--color-destructive-foreground: hsl(0 0% 98%);
+
+	--color-ring: hsl(240 5% 64.9%);
+
+	--radius-lg: 0.5rem;
+	--radius-md: calc(var(--radius-lg) - 2px);
+	--radius-sm: calc(var(--radius-lg) - 4px);
+}
+
+@layer base {
+	* {
+		border-color: var(--color-border);
+		scroll-behavior: smooth;
+	}
+
+	html {
+		font-size: 110%;
+	}
+
+	body {
+		background-color: var(--color-background);
+		color: var(--color-foreground);
+	}
+
+	.bio a {
+		text-decoration: underline;
+		color: var(--color-primary);
+	}
+
+	.bio {
+		color: var(--color-foreground);
+	}
+}

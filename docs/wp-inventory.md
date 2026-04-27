@@ -8,55 +8,55 @@
 
 ### Top-level routes confirmed in WordPress
 
-| WP ID | Slug / Title | State |
-|---|---|---|
-| 3575 | Home | publish |
-| 7228 | About | publish |
-| 7436 | Staff (parent: 0) | publish |
-| 619 | Sermons | publish |
-| 7799 | Sermon Notes | publish |
-| 659 | Give | publish |
-| 661 | Calvary Blog | publish |
-| 664 | Contact | publish |
-| 4513 | Announcements | publish |
-| 642 | Children | publish |
-| 645 | Students | publish |
-| 629 | Adult Classes | publish |
-| 626 | Journey Groups | publish |
-| 654 | Missions | publish |
-| 7486 | Local Missions | publish |
-| 657 | Prayer Room | publish |
-| 7815 | Prayer Request | publish |
-| 652 | Ladies | publish |
-| 1004 | Ministry Team Training | publish |
-| 623 | Become a Member | publish |
-| 621 | Get Involved (parent of Calendar, Adult Classes, JG, BaM) | publish |
-| 638 | Ministries | publish |
-| 636 | Calendar (parent: 621) | publish |
-| 7168 | Join Us Sunday | publish |
-| 6254 | Online Calendar | publish |
-| 4521 | Join Us Online! | publish |
-| 4562 | Connect | publish |
-| 3469 | Resources | publish |
-| 3583 | Cart | publish (Woo) |
-| 6941 | Shop | publish (Woo) |
-| 6942 | Checkout | publish (Woo) |
-| 6943 | My account | publish (Woo) |
-| 11017 | Memorial Services | publish |
-| 11463 | MPN | publish |
+| WP ID | Slug / Title                                              | State         |
+| ----- | --------------------------------------------------------- | ------------- |
+| 3575  | Home                                                      | publish       |
+| 7228  | About                                                     | publish       |
+| 7436  | Staff (parent: 0)                                         | publish       |
+| 619   | Sermons                                                   | publish       |
+| 7799  | Sermon Notes                                              | publish       |
+| 659   | Give                                                      | publish       |
+| 661   | Calvary Blog                                              | publish       |
+| 664   | Contact                                                   | publish       |
+| 4513  | Announcements                                             | publish       |
+| 642   | Children                                                  | publish       |
+| 645   | Students                                                  | publish       |
+| 629   | Adult Classes                                             | publish       |
+| 626   | Journey Groups                                            | publish       |
+| 654   | Missions                                                  | publish       |
+| 7486  | Local Missions                                            | publish       |
+| 657   | Prayer Room                                               | publish       |
+| 7815  | Prayer Request                                            | publish       |
+| 652   | Ladies                                                    | publish       |
+| 1004  | Ministry Team Training                                    | publish       |
+| 623   | Become a Member                                           | publish       |
+| 621   | Get Involved (parent of Calendar, Adult Classes, JG, BaM) | publish       |
+| 638   | Ministries                                                | publish       |
+| 636   | Calendar (parent: 621)                                    | publish       |
+| 7168  | Join Us Sunday                                            | publish       |
+| 6254  | Online Calendar                                           | publish       |
+| 4521  | Join Us Online!                                           | publish       |
+| 4562  | Connect                                                   | publish       |
+| 3469  | Resources                                                 | publish       |
+| 3583  | Cart                                                      | publish (Woo) |
+| 6941  | Shop                                                      | publish (Woo) |
+| 6942  | Checkout                                                  | publish (Woo) |
+| 6943  | My account                                                | publish (Woo) |
+| 11017 | Memorial Services                                         | publish       |
+| 11463 | MPN                                                       | publish       |
 
 ### Drafts / unpublished (intent signals)
 
-| WP ID | Title |
-|---|---|
-| 2925 | What We Believe |
-| 2859 | Testimonies |
-| 650 | Men |
-| 4384 | Alpha |
-| 817 | Staff Members |
-| 7702 | Feeds |
-| 7921 | (untitled draft) |
-| 8298 | Styles |
+| WP ID | Title            |
+| ----- | ---------------- |
+| 2925  | What We Believe  |
+| 2859  | Testimonies      |
+| 650   | Men              |
+| 4384  | Alpha            |
+| 817   | Staff Members    |
+| 7702  | Feeds            |
+| 7921  | (untitled draft) |
+| 8298  | Styles           |
 
 ### Per-staff pages (children of Staff page 7436)
 
@@ -109,39 +109,40 @@ Far more active than Tim suggested ("they don't use it a lot"). Recent posts inc
 
 ## Custom Post Types (active)
 
-| CPT | Source plugin | Public | Notes |
-|---|---|---|---|
-| `product` | WooCommerce | yes | Merch via Printful (print-on-demand) |
-| `product_variation` | WooCommerce | no | |
-| `shop_order`, `shop_order_refund`, `shop_coupon` | WooCommerce | no | |
-| `sp_accordion_faqs` | Easy Accordion | yes | FAQ post type |
-| `sp_easy_accordion` | Easy Accordion | no | FAQ groupings |
-| `nf_sub` | Ninja Forms | no | form submissions |
-| ACF: `acf-post-type`, `acf-taxonomy`, `acf-field-group`, `acf-field` | ACF Pro | no | structure-defining |
-| `gp_elements`, `gblocks_templates`, `gblocks_styles` | GenerateBlocks | no | template/styling |
-| `wp_show_posts` | WP Show Posts | no | dynamic post lists |
+| CPT                                                                  | Source plugin  | Public | Notes                                |
+| -------------------------------------------------------------------- | -------------- | ------ | ------------------------------------ |
+| `product`                                                            | WooCommerce    | yes    | Merch via Printful (print-on-demand) |
+| `product_variation`                                                  | WooCommerce    | no     |                                      |
+| `shop_order`, `shop_order_refund`, `shop_coupon`                     | WooCommerce    | no     |                                      |
+| `sp_accordion_faqs`                                                  | Easy Accordion | yes    | FAQ post type                        |
+| `sp_easy_accordion`                                                  | Easy Accordion | no     | FAQ groupings                        |
+| `nf_sub`                                                             | Ninja Forms    | no     | form submissions                     |
+| ACF: `acf-post-type`, `acf-taxonomy`, `acf-field-group`, `acf-field` | ACF Pro        | no     | structure-defining                   |
+| `gp_elements`, `gblocks_templates`, `gblocks_styles`                 | GenerateBlocks | no     | template/styling                     |
+| `wp_show_posts`                                                      | WP Show Posts  | no     | dynamic post lists                   |
 
 **No custom CPTs registered for sermons, missionaries, staff, partners, events.** All of those are stored as standard WP `page` with parent-child relationships and ACF custom fields (likely). This means:
+
 - ACF Pro field groups will tell us what extra fields each "post type pretending to be a page" has
 - Migration needs to scrape ACF fields per-page-template, not per-CPT
 
 ## Active Plugins (notable)
 
-| Plugin | Role | Migration impact |
-|---|---|---|
-| **advanced-custom-fields-pro** | Custom fields infrastructure | Critical — all extra content fields live here. Need to dump field groups |
-| **anchor-episodes-index** | Anchor.fm podcast integration on /sermons | Existing sermon-audio pattern. Inspect output to inform our native player |
-| **gravityforms** | Forms (active) | Tim said "Shelby" but Gravity is active too — audit which forms use what |
-| **ninja-forms** | Forms (active) | Second form plugin running concurrently with Gravity |
-| **woocommerce** + **printful-shipping-for-woocommerce** | Print-on-demand merch | /shop decision: replicate, link to Printful direct, or kill |
-| **woocommerce-paypal-payments**, **woocommerce-square** | Payment processors | Two payment paths active |
-| **redirection** | URL redirect map | Export this — primary input to launch redirect plan |
-| **wordpress-seo** (Yoast) | SEO meta | Per-page meta + sitemap to migrate |
-| **easy-accordion-free** | FAQ as CPT | If churches use this for FAQs, may want to migrate as content |
-| **generateblocks-pro** + **gp-premium** | Page builder + theme | Page content is in Gutenberg blocks via GenerateBlocks — markup will need careful unwrap |
-| **vimeo** | Vimeo embeds | Some video may not be on YouTube as Tim said — verify |
-| **disable-comments** | Comments off | Confirmed: no comments to migrate |
-| **wp-show-posts** | Dynamic post lists | Used for blog/announcement listings — find usage |
+| Plugin                                                  | Role                                      | Migration impact                                                                         |
+| ------------------------------------------------------- | ----------------------------------------- | ---------------------------------------------------------------------------------------- |
+| **advanced-custom-fields-pro**                          | Custom fields infrastructure              | Critical — all extra content fields live here. Need to dump field groups                 |
+| **anchor-episodes-index**                               | Anchor.fm podcast integration on /sermons | Existing sermon-audio pattern. Inspect output to inform our native player                |
+| **gravityforms**                                        | Forms (active)                            | Tim said "Shelby" but Gravity is active too — audit which forms use what                 |
+| **ninja-forms**                                         | Forms (active)                            | Second form plugin running concurrently with Gravity                                     |
+| **woocommerce** + **printful-shipping-for-woocommerce** | Print-on-demand merch                     | /shop decision: replicate, link to Printful direct, or kill                              |
+| **woocommerce-paypal-payments**, **woocommerce-square** | Payment processors                        | Two payment paths active                                                                 |
+| **redirection**                                         | URL redirect map                          | Export this — primary input to launch redirect plan                                      |
+| **wordpress-seo** (Yoast)                               | SEO meta                                  | Per-page meta + sitemap to migrate                                                       |
+| **easy-accordion-free**                                 | FAQ as CPT                                | If churches use this for FAQs, may want to migrate as content                            |
+| **generateblocks-pro** + **gp-premium**                 | Page builder + theme                      | Page content is in Gutenberg blocks via GenerateBlocks — markup will need careful unwrap |
+| **vimeo**                                               | Vimeo embeds                              | Some video may not be on YouTube as Tim said — verify                                    |
+| **disable-comments**                                    | Comments off                              | Confirmed: no comments to migrate                                                        |
+| **wp-show-posts**                                       | Dynamic post lists                        | Used for blog/announcement listings — find usage                                         |
 
 ## Things This Changes in Our Spec
 
