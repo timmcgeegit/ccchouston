@@ -5,15 +5,10 @@
   import { ArrowDown, Outdent } from 'lucide-svelte';
   import OurTeam from './OurTeam.svelte';
   import type { PageData } from './$types';
-  import type { TeamMember } from "$lib/types/teammember";
   import * as Accordion from "$lib/components/ui/accordion";
   import { Separator } from "$lib/components/ui/separator";
-  
-  export let data: PageData;
 
-  function openBioModal(member: TeamMember) {
-    // Implement the logic to open the bio modal here
-  }
+  export let data: PageData;
 </script>
 
 <main>

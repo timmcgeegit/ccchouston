@@ -2,16 +2,9 @@
 <script lang="ts">
   import * as Card from "$lib/components/ui/card";
   import type { TeamMember } from "$lib/types/teammember";
-  import { createEventDispatcher } from 'svelte';
   import * as Dialog from "$lib/components/ui/dialog";
 
   export let member: TeamMember;
-
-  const dispatch = createEventDispatcher();
-
-  function handleBioClick() {
-    dispatch('openBioModal', member);
-  }
 </script>
 <Card.Root class="transition-all rounded-lg overflow-hidden ease-in-out h-full duration-500 hover:shadow-xl shadow-lg pb-3">
 

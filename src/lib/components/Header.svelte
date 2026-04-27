@@ -1,4 +1,4 @@
-<!-- ccchouston/src/lib/components/header.svelte -->
+<!-- ccchouston/src/lib/components/Header.svelte -->
 <script lang="ts">
     import { Button } from "$lib/components/ui/button";
     import * as Sheet from "$lib/components/ui/sheet";
