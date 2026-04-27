@@ -7,8 +7,7 @@ declare global {
 		// interface PageData {}
 		// interface PageState {}
 		// interface Platform {}
-		interface Locals {
-		user: import('@supabase/supabase-js').User | null;
-		}
 	}
 }
+
+export {};

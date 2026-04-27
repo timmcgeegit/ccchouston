@@ -1,13 +1,24 @@
-// // src/lib/supabaseClient.js
-// import { createClient } from '@supabase/supabase-js';
-// const supabaseUrl = process.env.SUPABASE_URL;
-// const supabaseKey = process.env.SUPABASE_ANON_KEY;
-// export const supabase = createClient(supabaseUrl, supabaseKey);
+// Stubbed for design-review only. Original site used Supabase for data and auth.
+// This stub returns empty results so any lingering imports don't crash the dev server.
 
-// ccchouston/src/lib/supabaseClient.js
-import { createClient } from '@supabase/supabase-js';
+const noopQuery = {
+  select: () => noopQuery,
+  eq: () => noopQuery,
+  order: () => noopQuery,
+  insert: () => Promise.resolve({ data: null, error: null }),
+  update: () => Promise.resolve({ data: null, error: null }),
+  delete: () => Promise.resolve({ data: null, error: null }),
+  then: (resolve) => resolve({ data: [], error: null }),
+};
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-const supabaseKey = import.meta.env.VITE_SUPABASE_KEY;
-
-export const supabase = createClient(supabaseUrl, supabaseKey);
+export const supabase = {
+  from: () => noopQuery,
+  auth: {
+    getSession: async () => ({ data: { session: null }, error: null }),
+    getUser: async () => ({ data: { user: null }, error: null }),
+    signInWithPassword: async () => ({ data: null, error: new Error('auth disabled') }),
+    signOut: async () => ({ error: null }),
+    session: () => null,
+    onAuthStateChange: () => ({ data: { subscription: { unsubscribe: () => {} } } }),
+  },
+};
