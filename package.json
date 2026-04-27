@@ -39,8 +39,6 @@
 	"type": "module",
 	"dependencies": {
 		"@internationalized/date": "^3.5.2",
-		"@supabase/auth-helpers-sveltekit": "^0.13.0",
-		"@supabase/supabase-js": "^2.42.3",
 		"bits-ui": "^0.21.1",
 		"clsx": "^2.1.0",
 		"cmdk-sv": "^0.0.17",
