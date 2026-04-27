@@ -3,7 +3,6 @@
     import { Button } from "$lib/components/ui/button";
     import * as Sheet from "$lib/components/ui/sheet";
     import { Menu } from 'lucide-svelte';
-    import * as Popover from "$lib/components/ui/popover";
     import * as HoverCard from "$lib/components/ui/hover-card";
     
 </script>
