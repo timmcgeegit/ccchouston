@@ -78,9 +78,9 @@
       </div>
       <div>
           <Card.Root class="transition-all h-full ease-in-out duration-500 hover:-translate-y-3 hover:shadow-xl shadow-lg pb-3">
-              <img src="https://images.unsplash.com/photo-1565813086292-604790c8a97b?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Adult Ministires" class="mb-6 rounded">
+              <img src="https://images.unsplash.com/photo-1565813086292-604790c8a97b?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Adult Ministries" class="mb-6 rounded">
               <Card.Header class=" mb-3 py-0">
-              <Card.Title class="pl-4 py-1 border-l-4 border-primary text-2xl tracking-wide">Adult Ministires</Card.Title>
+              <Card.Title class="pl-4 py-1 border-l-4 border-primary text-2xl tracking-wide">Adult Ministries</Card.Title>
               </Card.Header>
               <Card.Content class="">
               <p>Our attorneys assist residential property owners with a range of legal matters, from property tax appeals to homeowners' association disputes and real estate transactions.</p>

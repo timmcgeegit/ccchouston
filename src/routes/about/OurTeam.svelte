@@ -3,8 +3,7 @@
   import TeamMemberComponent from "$lib/components/TeamMember.svelte";
   
   export let teamMembers: TeamMemberType[] = [];
-  console.log('Team members data in OurTeam.svelte:', teamMembers);
-  </script>
+</script>
   
   <section class="bg-muted-lighter py-24">
     <div class="container mx-auto">

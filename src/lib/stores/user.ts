@@ -6,7 +6,3 @@ export const user = writable<{
   email: string;
   // Add other properties as needed
 } | null>(null);
-
-user.subscribe((value) => {
-  console.log('User store value:', value);
-});

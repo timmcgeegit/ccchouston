@@ -10,11 +10,9 @@
   import { Separator } from "$lib/components/ui/separator";
   
   export let data: PageData;
-  console.log('Team members data in +page.svelte:', data.teamMembers);
 
   function openBioModal(member: TeamMember) {
     // Implement the logic to open the bio modal here
-    console.log('Opening bio modal for:', member);
   }
 </script>
 

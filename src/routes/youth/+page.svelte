@@ -64,7 +64,7 @@
               </Accordion.Content>
             </Accordion.Item>
             <Accordion.Item value="item-2">
-              <Accordion.Trigger class="text-left md:text-xl lg:text-2xl hover:no-underline">⭐️  Sunady Morning Bible Study @ 9:00 AM</Accordion.Trigger>
+              <Accordion.Trigger class="text-left md:text-xl lg:text-2xl hover:no-underline">⭐️  Sunday Morning Bible Study @ 9:00 AM</Accordion.Trigger>
               <Accordion.Content class="text-md max-w-3xl">
                 Fall Lesson Series: Gospel Project’s From Creation to Chaos
                 From Creation to Chaos helps kids learn that in the beginning, God created everything for His glory and our good. When sin entered the world in the Garden of Eden and spread to people, creation appeared to be ruined. But as God established a covenant with Abraham, He proved that nothing is outside of His plan or control to redeem His creation from sin.
@@ -80,7 +80,7 @@
               </Accordion.Content>
             </Accordion.Item>
             <Accordion.Item value="item-4">
-              <Accordion.Trigger class="text-left md:text-xl lg:text-2xl hover:no-underline">⭐️  Calvary Kids Club, Wedensdays @ 6:30 PM</Accordion.Trigger>
+              <Accordion.Trigger class="text-left md:text-xl lg:text-2xl hover:no-underline">⭐️  Calvary Kids Club, Wednesdays @ 6:30 PM</Accordion.Trigger>
               <Accordion.Content class="text-md max-w-3xl">
                 Boys and Girls Club meets each Wednesday, beginning September 6 through May 1, from 6:30-8:00 pm. Kids Club is a safe place where kids in 1st-5th grade can make friends, have fun, and grow in godly character. Kids will enjoy character-building lessons, games, art, crafts, cooking, gym time, snacks, and special events.
                 Registration for 2023-24 is now CLOSED. Registration for 2024-25 will open on August 1.
