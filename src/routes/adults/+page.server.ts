@@ -1,18 +1,6 @@
-// src/routes/adults/+page.server.js
-import { error } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
-import { supabase } from '$lib/supabaseClient';
+import { announcementsByCategory } from '$lib/sample-data';
 
 export const load: PageServerLoad = async () => {
-  const { data, error: supabaseError } = await supabase
-    .from('announcements')
-    .select('*')
-    .eq('category', 'adults');
-
-  if (supabaseError) {
-    throw error(500, 'Failed to fetch featured announcements');
-  }
-
-  return { featuredAnnouncements: data ?? [] };
+  return { featuredAnnouncements: announcementsByCategory('adults') };
 };
-
