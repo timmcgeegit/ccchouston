@@ -1,13 +1,63 @@
 <!-- ccchouston/src/lib/components/Header.svelte -->
 <script lang="ts">
-	import { Button } from '$lib/components/ui/button';
 	import * as Sheet from '$lib/components/ui/sheet';
-	import Menu from '@lucide/svelte/icons/menu';
 	import * as HoverCard from '$lib/components/ui/hover-card';
+	import Menu from '@lucide/svelte/icons/menu';
+
+	let mobileOpen = $state(false);
+
+	type NavLink = { label: string; href: string };
+	type NavGroup = { label: string; links: NavLink[] };
+
+	const mobileNav: NavGroup[] = [
+		{
+			label: 'Join Us Sunday',
+			links: [
+				{ label: 'Plan a Visit', href: '/plan-visit' },
+				{ label: 'Connect Card', href: '/connect-card' },
+				{ label: 'Join Online', href: '/join-online' }
+			]
+		},
+		{
+			label: 'About Us',
+			links: [{ label: 'About', href: '/about' }]
+		},
+		{
+			label: 'Get Involved',
+			links: [
+				{ label: 'Adult Ministries', href: '/adults' },
+				{ label: 'Kids Ministry', href: '/kids' },
+				{ label: 'Youth Ministry', href: '/youth' },
+				{ label: 'Missions', href: '/missions' },
+				{ label: 'Serve', href: '/serve' }
+			]
+		},
+		{
+			label: 'Sermons & Giving',
+			links: [
+				{ label: 'Sermons', href: '/sermons' },
+				{ label: 'Give', href: '/give' }
+			]
+		},
+		{
+			label: 'More',
+			links: [
+				{ label: 'Calendar', href: '/calendar' },
+				{ label: 'Blog', href: '/blog' },
+				{ label: 'Contact Us', href: '/contact' },
+				{ label: 'Prayer Request', href: '/prayer-request' },
+				{ label: 'Announcements', href: '/announcements' }
+			]
+		}
+	];
+
+	function handleLinkClick() {
+		mobileOpen = false;
+	}
 </script>
 
 <header class="border-b-2">
-	<nav class="bg-background-alt text-foreground px-4 py-8">
+	<nav class="bg-background-alt text-foreground px-4 py-8" aria-label="Primary">
 		<div class="container mx-auto flex items-center justify-between">
 			<div>
 				<a href="/"
@@ -69,7 +119,6 @@
 										class="text-foreground hover:text-primary active:text-primary mx-4 transition-all duration-300"
 										>Youth Ministry</a
 									>
-									<!-- <a href="/serve" class="mx-4 text-foreground hover:text-primary active:text-primary transition-all duration-300">Serve</a>   -->
 									<a
 										href="/missions"
 										class="text-foreground hover:text-primary active:text-primary mx-4 transition-all duration-300"
@@ -85,67 +134,48 @@
 						</HoverCard.Root>
 					</li>
 					<li class="border-animate relative">
-						<a href="/about" class="text-foreground hover:text-primary active:text-primary"
+						<a href="/sermons" class="text-foreground hover:text-primary active:text-primary"
 							>Sermons</a
 						>
 					</li>
 					<li class="border-animate relative">
-						<a href="/about" class="text-foreground hover:text-primary active:text-primary">Give</a>
+						<a href="/give" class="text-foreground hover:text-primary active:text-primary">Give</a>
 					</li>
 				</ul>
-				<div class="ml-5">
-					<Sheet.Root>
-						<Sheet.Trigger class="items-center pt-3"
-							><Menu aria-label="Open Mobile Navigation" /></Sheet.Trigger
-						>
+				<div class="ml-5 lg:hidden">
+					<Sheet.Root bind:open={mobileOpen}>
+						<Sheet.Trigger class="flex items-center pt-3" aria-label="Open mobile navigation">
+							<Menu />
+						</Sheet.Trigger>
 						<Sheet.Content>
 							<Sheet.Header>
-								<Sheet.Title></Sheet.Title>
-								<Sheet.Description>
-									<ul class="space-y-3 text-lg">
-										<li>
-											<a
-												href="#"
-												class="text-foreground hover:text-primary active:text-primary mx-4 transition-all duration-300"
-												>About Us</a
-											>
-										</li>
-										<li>
-											<a
-												href="#"
-												class="text-foreground hover:text-primary active:text-primary mx-4 transition-all duration-300"
-												>Get Involved</a
-											>
-										</li>
-										<li>
-											<a
-												href="#"
-												class="text-foreground hover:text-primary active:text-primary mx-4 transition-all duration-300"
-												>Kids & Youth</a
-											>
-										</li>
-										<li>
-											<a
-												href="/about"
-												class="text-foreground hover:text-primary active:text-primary mx-4 transition-all duration-300"
-												>Sermons</a
-											>
-										</li>
-										<li>
-											<a
-												href="#"
-												class="text-foreground hover:text-primary active:text-primary mx-4 transition-all duration-300"
-												>Give</a
-											>
-										</li>
-									</ul>
-									<Button
-										href="/contact"
-										class="text my-6 py-6 font-normal tracking-wide transition-all duration-300 hover:shadow-xl"
-										>Request Consultation</Button
-									>
-								</Sheet.Description>
+								<Sheet.Title class="text-h4 tracking-wide">Menu</Sheet.Title>
 							</Sheet.Header>
+							<nav aria-label="Mobile" class="overflow-y-auto px-4 pb-8">
+								<ul class="space-y-6">
+									{#each mobileNav as group (group.label)}
+										<li>
+											<h2
+												class="text-caption text-muted-foreground mb-2 font-semibold tracking-wider uppercase"
+											>
+												{group.label}
+											</h2>
+											<ul class="space-y-1">
+												{#each group.links as link (link.href)}
+													<li>
+														<a
+															href={link.href}
+															onclick={handleLinkClick}
+															class="text-foreground hover:text-primary block py-2 text-lg transition-colors duration-200"
+															>{link.label}</a
+														>
+													</li>
+												{/each}
+											</ul>
+										</li>
+									{/each}
+								</ul>
+							</nav>
 						</Sheet.Content>
 					</Sheet.Root>
 				</div>
