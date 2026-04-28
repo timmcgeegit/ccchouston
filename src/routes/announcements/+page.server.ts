@@ -1,5 +1,6 @@
-import { sampleAnnouncements } from '$lib/sample-data';
+import type { PageServerLoad } from './$types';
+import { getActive } from '$lib/data/announcements';
 
-export async function load() {
-	return { announcements: sampleAnnouncements };
-}
+export const load: PageServerLoad = async () => {
+	return { announcements: getActive() };
+};
