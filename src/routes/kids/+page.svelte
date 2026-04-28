@@ -2,6 +2,7 @@
 <script lang="ts">
 	import HeroSection from '$lib/components/design/HeroSection.svelte';
 	import SectionTitle from '$lib/components/design/SectionTitle.svelte';
+	import OffsetCard from '$lib/components/design/OffsetCard.svelte';
 	import { Button } from '$lib/components/ui/button';
 	import * as Accordion from '$lib/components/ui/accordion';
 	import Announcement from '$lib/components/Announcement.svelte';
@@ -46,15 +47,12 @@
 
 	<section class="mx-auto max-w-6xl">
 		<div class="container mx-auto my-32 grid grid-cols-1 gap-14 align-middle md:grid-cols-3">
-			<div class="bg-primary relative -top-5 -left-5 overflow-visible rounded-lg md:col-span-1">
-				<div
-					class="relative top-5 left-5 flex aspect-[6/4] h-full w-full flex-row items-center justify-center overflow-clip rounded-lg bg-cover bg-center align-middle transition-all duration-500 lg:aspect-[4/4]"
-					style="background-image: url('https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"
-				>
-					<div
-						class="from-muted-darker/60 to-foreground/20 z-1 h-full w-full flex-col justify-center bg-gradient-to-bl bg-cover align-middle"
-					></div>
-				</div>
+			<div class="md:col-span-1">
+				<OffsetCard
+					imageUrl="https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+					altText="Calvary kids learning together"
+					direction="tl"
+				/>
 			</div>
 			<div class="flex flex-col justify-center md:col-span-2">
 				<SectionTitle title="Special Event" />
