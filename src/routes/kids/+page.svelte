@@ -5,7 +5,7 @@
 	import OffsetCard from '$lib/components/design/OffsetCard.svelte';
 	import { Button } from '$lib/components/ui/button';
 	import * as Accordion from '$lib/components/ui/accordion';
-	import Announcement from '$lib/components/Announcement.svelte';
+	import AnnouncementCard from '$lib/components/design/AnnouncementCard.svelte';
 	import type { Announcement as AnnouncementType } from '$lib/types/announcements';
 
 	export let data: { featuredAnnouncements: AnnouncementType[] };
@@ -142,7 +142,7 @@
 		</p>
 		<div class="grid grid-cols-1 gap-3 md:min-h-32 md:grid-cols-2 lg:grid-cols-4">
 			{#each data.featuredAnnouncements as announcement (announcement.id)}
-				<Announcement {announcement} />
+				<AnnouncementCard {announcement} />
 			{/each}
 		</div>
 	</section>
