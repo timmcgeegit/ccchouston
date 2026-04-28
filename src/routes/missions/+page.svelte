@@ -11,10 +11,10 @@
 
 <main>
 	<section class="container mx-auto my-20 content-center items-center justify-center text-center">
-		<h1 class="mb-4 font-sans text-5xl font-black tracking-wide uppercase lg:text-8xl">
+		<h1 class="text-display mb-4 tracking-wide uppercase">
 			{pageTitle}
 		</h1>
-		<p class="mx-auto mb-8 max-w-xl text-xl leading-relaxed">
+		<p class="text-lead mx-auto mb-8 max-w-xl">
 			Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur
 			cupidatat.
 		</p>
@@ -34,19 +34,19 @@
 		</div>
 	</section>
 	<section id="next" class="container mx-auto my-32 flex flex-row justify-between gap-5">
-		<div class="max-w-4xl text-lg">
-			<h2 class="mb-4 text-5xl font-black">About Calvary Missions</h2>
+		<div class="text-body max-w-4xl">
+			<h2 class="text-h2 mb-4">About Calvary Missions</h2>
 			<div class="bg-primary mb-4 h-1 w-12"></div>
-			<h3 class="mb-3 text-3xl">Extending the Kingdom</h3>
-			<p class="mb-4 text-lg">
+			<h3 class="text-h3 mb-3">Extending the Kingdom</h3>
+			<p class="text-body mb-4">
 				Calvary seeks to actively demonstrate kingdom principles beyond our walls to our community
 				and the world. We desire to proclaim and demonstrate God’s kingdom through varying arenas
 				including intercession, spiritual warfare, evangelism, missions, and an expression of
 				apostolic and power ministries. Our desire is to know the heart of God, declare his kingdom
 				on earth, and actively prepare for Christ to rule and reign.
 			</p>
-			<h3 class="mb-3 text-3xl">On Mission</h3>
-			<p class="mb-4 text-lg">
+			<h3 class="text-h3 mb-3">On Mission</h3>
+			<p class="text-body mb-4">
 				God wants us to get in on what he is doing, to bless what he is doing. He is moving in the
 				earth. Christ first calls us to draw near to him, to follow him, and to cooperate with his
 				working in and through our lives (Matthew 4:19, 9:35-39; Philippians 2:12-13). Then, the
@@ -56,7 +56,7 @@
 				serve God’s purposes in the earth.
 			</p>
 			<!-- <h3 class="text-3xl mb-2">How can you get involved?</h3>
-        <p class="text-lg">
+        <p class="text-body">
         God wants us to support his cross-cultural work, including ministry to the nations overseas. What can you do to see the desire of Christ fulfilled in the earth?
         </p> -->
 		</div>
@@ -75,9 +75,9 @@
 				</div>
 			</div>
 			<div class="flex flex-col justify-center md:col-span-2">
-				<h2 class="mb-4 text-4xl font-black">How can you get involved?</h2>
+				<h2 class="text-h2 mb-4">How can you get involved?</h2>
 				<div class="bg-primary mb-4 h-1 w-12"></div>
-				<p class="text-lg">
+				<p class="text-body">
 					God wants us to support his cross-cultural work, including ministry to the nations
 					overseas. What can you do to see the desire of Christ fulfilled in the earth?
 				</p>
@@ -94,19 +94,19 @@
 
 	<section class="mx-auto max-w-6xl">
 		<div class="container my-32 max-w-4xl">
-			<h2 class="mb-4 text-5xl font-black">How To Get Involved</h2>
+			<h2 class="text-h2 mb-4">How To Get Involved</h2>
 			<div class="bg-primary mb-4 h-1 w-12"></div>
-			<p class="mb-8 max-w-4xl text-xl leading-[1.5]">
+			<p class="text-lead mb-8 max-w-4xl">
 				We are here seeking to make a place where people can come and meet with God. There are many
 				ways that we serve the Lord and steward the influence he gives us. Click the links below to
 				learn more about the different ways you can get connected.
 			</p>
 			<Accordion.Root type="single">
 				<Accordion.Item value="item-1">
-					<Accordion.Trigger class="text-left hover:no-underline md:text-xl lg:text-2xl"
+					<Accordion.Trigger class="text-h4 text-left hover:no-underline"
 						>Missionaries</Accordion.Trigger
 					>
-					<Accordion.Content class="text-md max-w-3xl">
+					<Accordion.Content class="text-body max-w-3xl">
 						<p>
 							Calvary Missions supports various ministries and missionaries who serve to reach
 							people groups throughout the earth. They need your prayer and financial support. If
@@ -127,10 +127,10 @@
 					</Accordion.Content>
 				</Accordion.Item>
 				<Accordion.Item value="hargrove">
-					<Accordion.Trigger class="text-left hover:no-underline md:text-xl lg:text-2xl"
+					<Accordion.Trigger class="text-h4 text-left hover:no-underline"
 						>Hairgrove Partnership</Accordion.Trigger
 					>
-					<Accordion.Content class="text-md max-w-3xl">
+					<Accordion.Content class="text-body max-w-3xl">
 						<div class="space-y-2">
 							<p>
 								Calvary has joined with Copperfield Church in a partnership to serve Hairgrove
@@ -152,10 +152,10 @@
 					</Accordion.Content>
 				</Accordion.Item>
 				<Accordion.Item value="poverty">
-					<Accordion.Trigger class="text-left hover:no-underline md:text-xl lg:text-2xl"
+					<Accordion.Trigger class="text-h4 text-left hover:no-underline"
 						>Touching the Poor</Accordion.Trigger
 					>
-					<Accordion.Content class="text-md max-w-3xl">
+					<Accordion.Content class="text-body max-w-3xl">
 						<div class="space-y-2">
 							<p>
 								God's heart is towards the poor. Jesus declared that he had come to proclaim good
@@ -188,10 +188,10 @@
 					</Accordion.Content>
 				</Accordion.Item>
 				<Accordion.Item value="israel">
-					<Accordion.Trigger class="text-left hover:no-underline md:text-xl lg:text-2xl"
+					<Accordion.Trigger class="text-h4 text-left hover:no-underline"
 						>Ministry to Israel</Accordion.Trigger
 					>
-					<Accordion.Content class="text-md max-w-3xl">
+					<Accordion.Content class="text-body max-w-3xl">
 						<div class="space-y-2">
 							<p>
 								God, in His infinite wisdom, love, and desire for eternal fellowship with man, chose
@@ -226,10 +226,10 @@
 					</Accordion.Content>
 				</Accordion.Item>
 				<Accordion.Item value="item-4">
-					<Accordion.Trigger class="text-left hover:no-underline md:text-xl lg:text-2xl"
+					<Accordion.Trigger class="text-h4 text-left hover:no-underline"
 						>Mission Trips</Accordion.Trigger
 					>
-					<Accordion.Content class="text-md max-w-3xl">
+					<Accordion.Content class="text-body max-w-3xl">
 						<div class="space-y-2">
 							<p>
 								Part of our assignment at Calvary Missions is to help people get to the mission
@@ -284,10 +284,10 @@
 					</Accordion.Content>
 				</Accordion.Item>
 				<Accordion.Item value="item-5">
-					<Accordion.Trigger class="text-left hover:no-underline md:text-xl lg:text-2xl"
+					<Accordion.Trigger class="text-h4 text-left hover:no-underline"
 						>Calvary Missionaries</Accordion.Trigger
 					>
-					<Accordion.Content class="text-md max-w-3xl">
+					<Accordion.Content class="text-body max-w-3xl">
 						<ul class="ml-5 list-outside list-disc space-y-1">
 							<li>
 								<a href="https://calvaryhouston.com/david-carter/"
@@ -319,10 +319,10 @@
 					</Accordion.Content>
 				</Accordion.Item>
 				<Accordion.Item value="item-6">
-					<Accordion.Trigger class="text-left hover:no-underline md:text-xl lg:text-2xl"
+					<Accordion.Trigger class="text-h4 text-left hover:no-underline"
 						>Local and Global Mission Partners</Accordion.Trigger
 					>
-					<Accordion.Content class="text-md max-w-3xl">
+					<Accordion.Content class="text-body max-w-3xl">
 						<ul class="ml-5 list-outside list-disc space-y-2">
 							<li>
 								<a href="https://crosswalkcenter.org/"><strong>CrossWalk Center</strong></a>, Kathy

@@ -7,9 +7,9 @@
 
 <section class="bg-muted-lighter py-24">
 	<div class="container mx-auto">
-		<h2 class="mb-4 text-5xl font-black">Our Team</h2>
+		<h2 class="text-h2 mb-4">Our Team</h2>
 		<div class="bg-primary mb-4 h-1 w-12"></div>
-		<p class="mb-8 max-w-4xl text-xl leading-[1.5]">
+		<p class="text-lead mb-8 max-w-4xl">
 			Meet our dedicated team members who are passionate about serving the Lord and making a
 			difference in our community.
 		</p>

@@ -14,7 +14,7 @@
 		<img src={member.team_img} alt={member.team_name} class="w-full rounded object-cover" />
 	</div>
 	<Card.Header class="mb-3 py-0 text-left ">
-		<Card.Title class="border-primary border-l-4 py-1 pl-3 text-2xl tracking-wide"
+		<Card.Title class="border-primary text-h4 border-l-4 py-1 pl-3 tracking-wide"
 			>{member.team_name}</Card.Title
 		>
 		<Card.Description class="pl-4">{member.team_position}</Card.Description>
@@ -22,7 +22,7 @@
 	<Card.Content>
 		{#if member.team_bio}
 			<Dialog.Root>
-				<Dialog.Trigger class="text-primary border-primary ml-4 border-b-2 text-sm"
+				<Dialog.Trigger class="text-primary border-primary text-caption ml-4 border-b-2"
 					>Read Bio</Dialog.Trigger
 				>
 				<Dialog.Content>

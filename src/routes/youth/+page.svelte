@@ -12,10 +12,10 @@
 
 <main>
 	<section class="container mx-auto my-20 content-center items-center justify-center text-center">
-		<h1 class="mb-4 font-sans text-5xl font-black tracking-wide uppercase lg:text-8xl">
+		<h1 class="text-display mb-4 tracking-wide uppercase">
 			{pageTitle}
 		</h1>
-		<p class="mx-auto mb-8 max-w-xl text-xl leading-relaxed">
+		<p class="text-lead mx-auto mb-8 max-w-xl">
 			Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur
 			cupidatat.
 		</p>
@@ -35,10 +35,10 @@
 		</div>
 	</section>
 	<section id="next" class="container mx-auto my-32 flex flex-row justify-between gap-5">
-		<div class="max-w-3xl space-y-4 text-lg">
-			<h2 class="mb-4 text-5xl font-black">This is a page for kids</h2>
+		<div class="text-body max-w-3xl space-y-4">
+			<h2 class="text-h2 mb-4">This is a page for kids</h2>
 			<div class="bg-primary mb-4 h-1 w-12"></div>
-			<p class="text-lg">
+			<p class="text-body">
 				Calvary is a community of people making a journey with each other in following Jesus. That
 				is the heart behind all we do– every ministry, every structure, every program, class,
 				service, or event– we are here seeking to make a place where people can come and meet with
@@ -46,7 +46,7 @@
 				surrender to our Master, and love the Lord our God with all our heart, and mind, and soul,
 				and strength.
 			</p>
-			<p class="text-lg">
+			<p class="text-body">
 				Have you found your place to help you in your journey? You are welcome to join us as we seek
 				to follow God together.
 			</p>
@@ -66,9 +66,9 @@
 				</div>
 			</div>
 			<div class="flex flex-col justify-center md:col-span-2">
-				<h2 class="mb-4 text-5xl font-black">Special Event</h2>
+				<h2 class="text-h2 mb-4">Special Event</h2>
 				<div class="bg-primary mb-4 h-1 w-12"></div>
-				<p class="text-lg">
+				<p class="text-body">
 					Welcome to our exclusive annual event! Join us for an unforgettable experience filled with
 					excitement, entertainment, and inspiration. Get ready to be part of something
 					extraordinary and create lasting memories with us. Save the date and stay tuned for more
@@ -87,19 +87,19 @@
 
 	<section class="mx-auto max-w-6xl">
 		<div class="container my-32 max-w-4xl">
-			<h2 class="mb-4 text-5xl font-black">Calvary Kids Schedule</h2>
+			<h2 class="text-h2 mb-4">Calvary Kids Schedule</h2>
 			<div class="bg-primary mb-4 h-1 w-12"></div>
-			<p class="mb-8 max-w-4xl text-xl leading-[1.5]">
+			<p class="text-lead mb-8 max-w-4xl">
 				We are here seeking to make a place where people can come and meet with God. There are many
 				ways that we serve the Lord and steward the influence he gives us. Click the links below to
 				learn more about the different ways you can get connected.
 			</p>
 			<Accordion.Root type="single">
 				<Accordion.Item value="item-1">
-					<Accordion.Trigger class="text-left hover:no-underline md:text-xl lg:text-2xl"
+					<Accordion.Trigger class="text-h4 text-left hover:no-underline"
 						>⭐️ Summer Bash Registration is Open!</Accordion.Trigger
 					>
-					<Accordion.Content class="text-md max-w-3xl">
+					<Accordion.Content class="text-body max-w-3xl">
 						Looking for something fun to do this Summer? Then join us each Wednesday in June & July
 						from 5-6:30 PM for an evening of fun! Each week is a different theme, featuring a
 						kid-friendly Bible message, music, games, crafts, & dinner. Your kids won’t want to miss
@@ -107,10 +107,10 @@
 					</Accordion.Content>
 				</Accordion.Item>
 				<Accordion.Item value="item-2">
-					<Accordion.Trigger class="text-left hover:no-underline md:text-xl lg:text-2xl"
+					<Accordion.Trigger class="text-h4 text-left hover:no-underline"
 						>⭐️ Sunday Morning Bible Study @ 9:00 AM</Accordion.Trigger
 					>
-					<Accordion.Content class="text-md max-w-3xl">
+					<Accordion.Content class="text-body max-w-3xl">
 						Fall Lesson Series: Gospel Project’s From Creation to Chaos From Creation to Chaos helps
 						kids learn that in the beginning, God created everything for His glory and our good.
 						When sin entered the world in the Garden of Eden and spread to people, creation appeared
@@ -120,10 +120,10 @@
 					</Accordion.Content>
 				</Accordion.Item>
 				<Accordion.Item value="item-3">
-					<Accordion.Trigger class="text-left hover:no-underline md:text-xl lg:text-2xl"
+					<Accordion.Trigger class="text-h4 text-left hover:no-underline"
 						>⭐️ New Kids Church Lesson Series, Sundays @ 10:00 AM</Accordion.Trigger
 					>
-					<Accordion.Content class="text-md max-w-3xl">
+					<Accordion.Content class="text-body max-w-3xl">
 						Join us Sunday mornings, beginning April 21, as we dive into the life and leadership of
 						Moses, and the Israelites’ incredible journey to freedom. And the Lord brought us out of
 						Egypt with a mighty hand and an outstretched arm, with great deeds of terror, with signs
@@ -132,10 +132,10 @@
 					</Accordion.Content>
 				</Accordion.Item>
 				<Accordion.Item value="item-4">
-					<Accordion.Trigger class="text-left hover:no-underline md:text-xl lg:text-2xl"
+					<Accordion.Trigger class="text-h4 text-left hover:no-underline"
 						>⭐️ Calvary Kids Club, Wednesdays @ 6:30 PM</Accordion.Trigger
 					>
-					<Accordion.Content class="text-md max-w-3xl">
+					<Accordion.Content class="text-body max-w-3xl">
 						Boys and Girls Club meets each Wednesday, beginning September 6 through May 1, from
 						6:30-8:00 pm. Kids Club is a safe place where kids in 1st-5th grade can make friends,
 						have fun, and grow in godly character. Kids will enjoy character-building lessons,
@@ -148,9 +148,9 @@
 	</section>
 
 	<section class="container mx-auto my-24">
-		<h2 class="mb-4 text-5xl font-black">Kids Announcements</h2>
+		<h2 class="text-h2 mb-4">Kids Announcements</h2>
 		<div class="bg-primary mb-4 h-1 w-12"></div>
-		<p class="mb-8 max-w-xl text-xl leading-relaxed">
+		<p class="text-lead mb-8 max-w-xl">
 			Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur
 			cupidatat.
 		</p>

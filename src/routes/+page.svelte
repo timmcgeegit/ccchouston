@@ -13,13 +13,12 @@
 	<section class="container mx-auto">
 		<div class="">
 			<div class="container mx-auto my-16 flex flex-col justify-center">
-				<h1 class="max-w-4xl text-5xl font-black tracking-wide uppercase lg:text-8xl">
+				<p class="text-display max-w-4xl tracking-wide uppercase">
 					A Community Following <span class="text-primary">Jesus</span> Together
+				</p>
+				<h1 class="text-h1 text-muted-foreground mt-6 max-w-4xl">
+					Calvary Community Church Houston
 				</h1>
-				<!-- <p class="text-xl max-w-xl leading-relaxed mb-8">Join us as we draw near to the Lord through worship, prayer, and reflecting on God’s word togther!</p> -->
-				<div>
-					<!-- <Button variant="outline" class="text-lg mb-0 transition-all duration-300 tracking-wide py-6 font-normal">Join Us Sunday</Button> -->
-				</div>
 			</div>
 		</div>
 		<div
@@ -44,9 +43,9 @@
 				</div>
 			</div>
 			<div class="flex flex-col justify-center">
-				<div><h2 class="mb-4 inline-flex text-5xl font-black">Who We Are</h2></div>
+				<div><h2 class="text-h2 mb-4 inline-flex">Who We Are</h2></div>
 				<div class="bg-primary mb-4 h-1 w-12"></div>
-				<p class="text-lg">
+				<p class="text-body">
 					We are a community of people on a journey with each other in following Jesus. That is the
 					heart behind all we do– every ministry, every structure, every program, class, service, or
 					event. May this be a place where you and I can encounter our Maker, praise our Father,
@@ -65,9 +64,9 @@
 
 	<section class="bg-muted-lighter py-24">
 		<div class="container mx-auto">
-			<h2 class="mb-4 text-5xl font-black">Get Connected</h2>
+			<h2 class="text-h2 mb-4">Get Connected</h2>
 			<div class="bg-primary mb-4 h-1 w-12"></div>
-			<p class="mb-8 max-w-4xl text-xl leading-[1.5]">
+			<p class="text-lead mb-8 max-w-4xl">
 				We are here seeking to make a place where people can come and meet with God. There are many
 				ways that we serve the Lord and steward the influence he gives us. Click the links below to
 				learn more about the different ways you can get connected.
@@ -83,7 +82,7 @@
 							class="mb-6 rounded"
 						/>
 						<Card.Header class=" mb-3 py-0">
-							<Card.Title class="border-primary border-l-4 py-1 pl-4 text-2xl tracking-wide"
+							<Card.Title class="border-primary text-h4 border-l-4 py-1 pl-4 tracking-wide"
 								>Kids Ministries</Card.Title
 							>
 						</Card.Header>
@@ -105,7 +104,7 @@
 							class="mb-6 rounded"
 						/>
 						<Card.Header class=" mb-3 py-0">
-							<Card.Title class="border-primary border-l-4 py-1 pl-4 text-2xl tracking-wide"
+							<Card.Title class="border-primary text-h4 border-l-4 py-1 pl-4 tracking-wide"
 								>Youth Ministries</Card.Title
 							>
 						</Card.Header>
@@ -127,7 +126,7 @@
 							class="mb-6 rounded"
 						/>
 						<Card.Header class=" mb-3 py-0">
-							<Card.Title class="border-primary border-l-4 py-1 pl-4 text-2xl tracking-wide"
+							<Card.Title class="border-primary text-h4 border-l-4 py-1 pl-4 tracking-wide"
 								>Adult Ministries</Card.Title
 							>
 						</Card.Header>
@@ -158,9 +157,9 @@
 	<section class="mx-auto max-w-7xl">
 		<div class="container mx-auto my-32 grid grid-cols-1 gap-24 align-middle lg:grid-cols-2">
 			<div class="flex flex-col justify-center">
-				<h2 class="mb-4 text-5xl font-black">Special Event</h2>
+				<h2 class="text-h2 mb-4">Special Event</h2>
 				<div class="bg-primary mb-4 h-1 w-12"></div>
-				<p class="text-lg">
+				<p class="text-body">
 					Welcome to our exclusive annual event! Join us for an unforgettable experience filled with
 					excitement, entertainment, and inspiration. Get ready to be part of something
 					extraordinary and create lasting memories with us. Save the date and stay tuned for more
@@ -192,8 +191,8 @@
 			class="bg-primary container mx-auto my-32 flex max-w-6xl flex-row content-center justify-center gap-24 rounded-lg p-8 py-20 align-middle shadow-2xl"
 		>
 			<div class="max-w-lg">
-				<h2 class="text-primary-foreground mb-4 text-3xl font-bold">Subscribe to our newsletter</h2>
-				<p class="text-primary-foreground text-lg">
+				<h2 class="text-primary-foreground text-h3 mb-4">Subscribe to our newsletter</h2>
+				<p class="text-primary-foreground text-body">
 					Keep up with everything happening at and around our church by signing up for our
 					newsletter. It’s the best way to stay in touch and we promise not to spam you.
 				</p>
@@ -208,9 +207,9 @@
 	</section>
 
 	<section class="container mx-auto my-24">
-		<h2 class="mb-4 text-5xl font-black">Featured Announcements</h2>
+		<h2 class="text-h2 mb-4">Featured Announcements</h2>
 		<div class="bg-primary mb-4 h-1 w-12"></div>
-		<p class="mb-8 max-w-xl text-xl leading-relaxed">
+		<p class="text-lead mb-8 max-w-xl">
 			Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur
 			cupidatat.
 		</p>
