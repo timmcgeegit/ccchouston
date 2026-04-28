@@ -1,7 +1,6 @@
 <!-- The objective of this page is to cast vision for the purpose of adult ministries and to give people an overview of how to, as an adult, get involved at the church throughout the year. Not just right now but if a guest is trying to evaluate what it looks like to be involved throughout the year this page should give an idea of that. -->
 <script lang="ts">
-	let pageTitle = 'Serve';
-	import ArrowDown from '@lucide/svelte/icons/arrow-down';
+	import HeroSection from '$lib/components/design/HeroSection.svelte';
 	import { Button } from '$lib/components/ui/button';
 	import * as Accordion from '$lib/components/ui/accordion';
 	import Announcement from '$lib/components/Announcement.svelte';
@@ -11,18 +10,10 @@
 </script>
 
 <main>
-	<section class="container mx-auto my-20 content-center items-center justify-center text-center">
-		<h1 class="text-display mb-4 tracking-wide uppercase">
-			{pageTitle}
-		</h1>
-		<p class="text-lead mx-auto mb-8 max-w-xl">
-			Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur
-			cupidatat.
-		</p>
-		<a href="#next" class="transition-all duration-300"
-			><ArrowDown class="mx-auto animate-bounce justify-center" /></a
-		>
-	</section>
+	<HeroSection
+		pageTitle="Serve"
+		subtitle="Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat."
+	/>
 
 	<section class="container mx-auto mt-20 mb-12">
 		<div

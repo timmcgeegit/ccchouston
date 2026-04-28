@@ -1,7 +1,6 @@
 <!-- src/routes/about/+page.svelte -->
 <script lang="ts">
-	let pageTitle = 'About Us';
-	import ArrowDown from '@lucide/svelte/icons/arrow-down';
+	import HeroSection from '$lib/components/design/HeroSection.svelte';
 	import OurTeam from './OurTeam.svelte';
 	import type { PageData } from './$types';
 	import * as Accordion from '$lib/components/ui/accordion';
@@ -10,17 +9,10 @@
 </script>
 
 <main>
-	<section class="container mx-auto my-20 content-center items-center justify-center text-center">
-		<h1 class="text-display mb-4 tracking-wide uppercase">
-			{pageTitle}
-		</h1>
-		<p class="text-lead mx-auto mb-8 max-w-xl">
-			Calvary is a community of people making a journey with each other in following Jesus.
-		</p>
-		<a href="#next" class="transition-all duration-300"
-			><ArrowDown class="mx-auto animate-bounce justify-center" /></a
-		>
-	</section>
+	<HeroSection
+		pageTitle="About Us"
+		subtitle="Calvary is a community of people making a journey with each other in following Jesus."
+	/>
 
 	<section class="container mx-auto my-20">
 		<div
