@@ -1,14 +1,14 @@
 <script lang="ts">
 	import type { TeamMember as TeamMemberType } from '$lib/types/teammember';
 	import TeamMemberComponent from '$lib/components/TeamMember.svelte';
+	import SectionTitle from '$lib/components/design/SectionTitle.svelte';
 
 	export let teamMembers: TeamMemberType[] = [];
 </script>
 
 <section class="bg-muted-lighter py-24">
 	<div class="container mx-auto">
-		<h2 class="text-h2 mb-4">Our Team</h2>
-		<div class="bg-primary mb-4 h-1 w-12"></div>
+		<SectionTitle title="Our Team" />
 		<p class="text-lead mb-8 max-w-4xl">
 			Meet our dedicated team members who are passionate about serving the Lord and making a
 			difference in our community.

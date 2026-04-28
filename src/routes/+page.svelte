@@ -3,6 +3,7 @@
 	import { Input } from '$lib/components/ui/input/index';
 	import { Button } from '$lib/components/ui/button';
 	import * as Card from '$lib/components/ui/card';
+	import SectionTitle from '$lib/components/design/SectionTitle.svelte';
 	import Announcement from '$lib/components/Announcement.svelte';
 	import type { Announcement as AnnouncementType } from '$lib/types/announcements';
 
@@ -43,8 +44,7 @@
 				</div>
 			</div>
 			<div class="flex flex-col justify-center">
-				<div><h2 class="text-h2 mb-4 inline-flex">Who We Are</h2></div>
-				<div class="bg-primary mb-4 h-1 w-12"></div>
+				<SectionTitle title="Who We Are" />
 				<p class="text-body">
 					We are a community of people on a journey with each other in following Jesus. That is the
 					heart behind all we do– every ministry, every structure, every program, class, service, or
@@ -64,8 +64,7 @@
 
 	<section class="bg-muted-lighter py-24">
 		<div class="container mx-auto">
-			<h2 class="text-h2 mb-4">Get Connected</h2>
-			<div class="bg-primary mb-4 h-1 w-12"></div>
+			<SectionTitle title="Get Connected" />
 			<p class="text-lead mb-8 max-w-4xl">
 				We are here seeking to make a place where people can come and meet with God. There are many
 				ways that we serve the Lord and steward the influence he gives us. Click the links below to
@@ -157,8 +156,7 @@
 	<section class="mx-auto max-w-7xl">
 		<div class="container mx-auto my-32 grid grid-cols-1 gap-24 align-middle lg:grid-cols-2">
 			<div class="flex flex-col justify-center">
-				<h2 class="text-h2 mb-4">Special Event</h2>
-				<div class="bg-primary mb-4 h-1 w-12"></div>
+				<SectionTitle title="Special Event" />
 				<p class="text-body">
 					Welcome to our exclusive annual event! Join us for an unforgettable experience filled with
 					excitement, entertainment, and inspiration. Get ready to be part of something
@@ -207,8 +205,7 @@
 	</section>
 
 	<section class="container mx-auto my-24">
-		<h2 class="text-h2 mb-4">Featured Announcements</h2>
-		<div class="bg-primary mb-4 h-1 w-12"></div>
+		<SectionTitle title="Featured Announcements" />
 		<p class="text-lead mb-8 max-w-xl">
 			Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur
 			cupidatat.

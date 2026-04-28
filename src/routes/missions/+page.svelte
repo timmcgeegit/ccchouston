@@ -1,6 +1,7 @@
 <!-- The objective of this page is to cast vision for the purpose of adult ministries and to give people an overview of how to, as an adult, get involved at the church throughout the year. Not just right now but if a guest is trying to evaluate what it looks like to be involved throughout the year this page should give an idea of that. -->
 <script lang="ts">
 	import HeroSection from '$lib/components/design/HeroSection.svelte';
+	import SectionTitle from '$lib/components/design/SectionTitle.svelte';
 	import { Button } from '$lib/components/ui/button';
 	import * as Accordion from '$lib/components/ui/accordion';
 </script>
@@ -23,8 +24,7 @@
 	</section>
 	<section id="next" class="container mx-auto my-32 flex flex-row justify-between gap-5">
 		<div class="text-body max-w-4xl">
-			<h2 class="text-h2 mb-4">About Calvary Missions</h2>
-			<div class="bg-primary mb-4 h-1 w-12"></div>
+			<SectionTitle title="About Calvary Missions" />
 			<h3 class="text-h3 mb-3">Extending the Kingdom</h3>
 			<p class="text-body mb-4">
 				Calvary seeks to actively demonstrate kingdom principles beyond our walls to our community
@@ -63,8 +63,7 @@
 				</div>
 			</div>
 			<div class="flex flex-col justify-center md:col-span-2">
-				<h2 class="text-h2 mb-4">How can you get involved?</h2>
-				<div class="bg-primary mb-4 h-1 w-12"></div>
+				<SectionTitle title="How can you get involved?" />
 				<p class="text-body">
 					God wants us to support his cross-cultural work, including ministry to the nations
 					overseas. What can you do to see the desire of Christ fulfilled in the earth?
@@ -82,8 +81,7 @@
 
 	<section class="mx-auto max-w-6xl">
 		<div class="container my-32 max-w-4xl">
-			<h2 class="text-h2 mb-4">How To Get Involved</h2>
-			<div class="bg-primary mb-4 h-1 w-12"></div>
+			<SectionTitle title="How To Get Involved" />
 			<p class="text-lead mb-8 max-w-4xl">
 				We are here seeking to make a place where people can come and meet with God. There are many
 				ways that we serve the Lord and steward the influence he gives us. Click the links below to

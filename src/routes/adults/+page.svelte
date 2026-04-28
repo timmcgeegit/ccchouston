@@ -1,6 +1,7 @@
 <!-- The objective of this page is to cast vision for the purpose of adult ministries and to give people an overview of how to, as an adult, get involved at the church throughout the year. Not just right now but if a guest is trying to evaluate what it looks like to be involved throughout the year this page should give an idea of that. -->
 <script lang="ts">
 	import HeroSection from '$lib/components/design/HeroSection.svelte';
+	import SectionTitle from '$lib/components/design/SectionTitle.svelte';
 	import { Button } from '$lib/components/ui/button';
 	import * as Accordion from '$lib/components/ui/accordion';
 	import Announcement from '$lib/components/Announcement.svelte';
@@ -27,8 +28,7 @@
 	</section>
 	<section id="next" class="container mx-auto my-32 flex flex-row justify-between gap-5">
 		<div class="text-body max-w-3xl space-y-4">
-			<h2 class="text-h2 mb-4">This is a page for kids</h2>
-			<div class="bg-primary mb-4 h-1 w-12"></div>
+			<SectionTitle title="This is a page for kids" />
 			<p class="text-body">
 				Calvary is a community of people making a journey with each other in following Jesus. That
 				is the heart behind all we do– every ministry, every structure, every program, class,
@@ -57,8 +57,7 @@
 				</div>
 			</div>
 			<div class="flex flex-col justify-center md:col-span-2">
-				<h2 class="text-h2 mb-4">Special Event</h2>
-				<div class="bg-primary mb-4 h-1 w-12"></div>
+				<SectionTitle title="Special Event" />
 				<p class="text-body">
 					Welcome to our exclusive annual event! Join us for an unforgettable experience filled with
 					excitement, entertainment, and inspiration. Get ready to be part of something
@@ -78,8 +77,7 @@
 
 	<section class="mx-auto max-w-6xl">
 		<div class="container my-32 max-w-4xl">
-			<h2 class="text-h2 mb-4">How To Get Involved</h2>
-			<div class="bg-primary mb-4 h-1 w-12"></div>
+			<SectionTitle title="How To Get Involved" />
 			<p class="text-lead mb-8 max-w-4xl">
 				We are here seeking to make a place where people can come and meet with God. There are many
 				ways that we serve the Lord and steward the influence he gives us. Click the links below to
@@ -179,8 +177,7 @@
 	</section>
 
 	<section class="container mx-auto my-24">
-		<h2 class="text-h2 mb-4">Adult Ministry Announcements</h2>
-		<div class="bg-primary mb-4 h-1 w-12"></div>
+		<SectionTitle title="Adult Ministry Announcements" />
 		<p class="text-lead mb-8 max-w-xl">
 			Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur
 			cupidatat.

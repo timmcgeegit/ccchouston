@@ -1,6 +1,7 @@
 <!-- src/routes/about/+page.svelte -->
 <script lang="ts">
 	import HeroSection from '$lib/components/design/HeroSection.svelte';
+	import SectionTitle from '$lib/components/design/SectionTitle.svelte';
 	import OurTeam from './OurTeam.svelte';
 	import type { PageData } from './$types';
 	import * as Accordion from '$lib/components/ui/accordion';
@@ -26,8 +27,7 @@
 	</section>
 	<section id="next" class="container mx-auto my-32 flex flex-row justify-between gap-5">
 		<div class="text-body max-w-3xl space-y-4">
-			<h2 class="text-h2 mb-4">This is a page about us</h2>
-			<div class="bg-primary mb-4 h-1 w-12"></div>
+			<SectionTitle title="This is a page about us" />
 			<p class="text-body">
 				Calvary is a community of people making a journey with each other in following Jesus. That
 				is the heart behind all we do– every ministry, every structure, every program, class,
@@ -62,8 +62,7 @@
 				/>
 			</div>
 			<div class="col-span-2 container mx-auto my-5">
-				<h2 class="text-h2 my-4">Our Vision</h2>
-				<div class="bg-primary mb-4 h-1 w-12"></div>
+				<SectionTitle title="Our Vision" />
 				<h3 class="text-lead my-4 max-w-xl">
 					Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint
 					consectetur cupidatat.
