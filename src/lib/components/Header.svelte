@@ -23,6 +23,7 @@
 			links: [
 				{ label: 'About', href: '/about' },
 				{ label: 'Our History', href: '/our-history' },
+				{ label: 'Staff', href: '/staff' },
 				{ label: 'Become a Member', href: '/become-a-member' }
 			]
 		},
@@ -32,7 +33,10 @@
 				{ label: 'Adult Ministries', href: '/adults' },
 				{ label: 'Kids Ministry', href: '/kids' },
 				{ label: 'Youth Ministry', href: '/youth' },
+				{ label: 'Womens Ministry', href: '/ladies' },
 				{ label: 'Missions', href: '/missions' },
+				{ label: 'Local Missions', href: '/local-missions' },
+				{ label: 'Journey Groups', href: '/journey-groups' },
 				{ label: 'Serve', href: '/serve' }
 			]
 		},
@@ -114,6 +118,11 @@
 										>Our History</a
 									>
 									<a
+										href="/staff"
+										class="text-foreground hover:text-primary active:text-primary mx-4 transition-all duration-300"
+										>Staff</a
+									>
+									<a
 										href="/become-a-member"
 										class="text-foreground hover:text-primary active:text-primary mx-4 transition-all duration-300"
 										>Become a Member</a
@@ -143,14 +152,29 @@
 										>Youth Ministry</a
 									>
 									<a
+										href="/ladies"
+										class="text-foreground hover:text-primary active:text-primary mx-4 transition-all duration-300"
+										>Womens Ministry</a
+									>
+									<a
 										href="/missions"
 										class="text-foreground hover:text-primary active:text-primary mx-4 transition-all duration-300"
 										>Missions</a
 									>
 									<a
-										href="/calendar"
+										href="/local-missions"
 										class="text-foreground hover:text-primary active:text-primary mx-4 transition-all duration-300"
-										>Calendar</a
+										>Local Missions</a
+									>
+									<a
+										href="/journey-groups"
+										class="text-foreground hover:text-primary active:text-primary mx-4 transition-all duration-300"
+										>Journey Groups</a
+									>
+									<a
+										href="/serve"
+										class="text-foreground hover:text-primary active:text-primary mx-4 transition-all duration-300"
+										>Serve</a
 									>
 								</div>
 							</HoverCard.Content>

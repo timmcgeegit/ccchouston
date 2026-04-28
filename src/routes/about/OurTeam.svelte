@@ -3,7 +3,11 @@
 	import TeamMemberComponent from '$lib/components/TeamMember.svelte';
 	import SectionTitle from '$lib/components/design/SectionTitle.svelte';
 
-	export let teamMembers: TeamMemberType[] = [];
+	interface Props {
+		teamMembers?: TeamMemberType[];
+	}
+
+	let { teamMembers = [] }: Props = $props();
 </script>
 
 <section class="bg-muted-lighter py-24">
@@ -14,7 +18,7 @@
 			difference in our community.
 		</p>
 		<div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-			{#each teamMembers as member (member.team_id)}
+			{#each teamMembers as member (member.id)}
 				<TeamMemberComponent {member} />
 			{/each}
 		</div>
