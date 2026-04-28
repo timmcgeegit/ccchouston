@@ -1,7 +1,12 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
+@import '@fontsource-variable/inter/wght.css';
 
 @theme {
+	--font-sans:
+		'Inter Variable', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+		Roboto, 'Helvetica Neue', Arial, sans-serif;
+
 	--color-background: hsl(32 40% 98.2%);
 	--color-foreground: hsl(240 12% 4%);
 

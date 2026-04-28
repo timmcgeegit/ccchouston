@@ -37,6 +37,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@fontsource-variable/inter": "^5.2.8",
 		"@lucide/svelte": "^0.482.0",
 		"bits-ui": "^1.4.7",
 		"clsx": "^2.1.1",
