@@ -2,9 +2,9 @@
 <script lang="ts">
 	import { Input } from '$lib/components/ui/input/index';
 	import { Button } from '$lib/components/ui/button';
-	import * as Card from '$lib/components/ui/card';
 	import SectionTitle from '$lib/components/design/SectionTitle.svelte';
 	import OffsetCard from '$lib/components/design/OffsetCard.svelte';
+	import MinistryCard from '$lib/components/design/MinistryCard.svelte';
 	import AnnouncementCard from '$lib/components/design/AnnouncementCard.svelte';
 	import type { Announcement as AnnouncementType } from '$lib/types/announcements';
 
@@ -67,73 +67,27 @@
 				learn more about the different ways you can get connected.
 			</p>
 			<div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-				<div>
-					<Card.Root
-						class="h-full pb-3 shadow-lg transition-all duration-500 ease-in-out hover:-translate-y-3 hover:shadow-xl"
-					>
-						<img
-							src="https://images.unsplash.com/photo-1594913495702-0872744c6968?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-							alt="Kids Ministry"
-							class="mb-6 rounded"
-						/>
-						<Card.Header class=" mb-3 py-0">
-							<Card.Title class="border-primary text-h4 border-l-4 py-1 pl-4 tracking-wide"
-								>Kids Ministries</Card.Title
-							>
-						</Card.Header>
-						<Card.Content class="">
-							<p>
-								Our firm provides comprehensive legal services for commercial property owners,
-								including property tax appeals, lease negotiations, and dispute resolution.
-							</p>
-						</Card.Content>
-					</Card.Root>
-				</div>
-				<div>
-					<Card.Root
-						class="h-full pb-3 shadow-lg transition-all duration-500 ease-in-out hover:-translate-y-3 hover:shadow-xl"
-					>
-						<img
-							src="https://images.unsplash.com/photo-1520857014576-2c4f4c972b57?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-							alt="Student Ministry"
-							class="mb-6 rounded"
-						/>
-						<Card.Header class=" mb-3 py-0">
-							<Card.Title class="border-primary text-h4 border-l-4 py-1 pl-4 tracking-wide"
-								>Youth Ministries</Card.Title
-							>
-						</Card.Header>
-						<Card.Content class="">
-							<p>
-								We offer tailored legal solutions for multi-use properties, navigating the complex
-								interplay of residential, commercial, and industrial regulations.
-							</p>
-						</Card.Content>
-					</Card.Root>
-				</div>
-				<div>
-					<Card.Root
-						class="h-full pb-3 shadow-lg transition-all duration-500 ease-in-out hover:-translate-y-3 hover:shadow-xl"
-					>
-						<img
-							src="https://images.unsplash.com/photo-1565813086292-604790c8a97b?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-							alt="Adult Ministries"
-							class="mb-6 rounded"
-						/>
-						<Card.Header class=" mb-3 py-0">
-							<Card.Title class="border-primary text-h4 border-l-4 py-1 pl-4 tracking-wide"
-								>Adult Ministries</Card.Title
-							>
-						</Card.Header>
-						<Card.Content class="">
-							<p>
-								Our attorneys assist residential property owners with a range of legal matters, from
-								property tax appeals to homeowners' association disputes and real estate
-								transactions.
-							</p>
-						</Card.Content>
-					</Card.Root>
-				</div>
+				<MinistryCard
+					title="Kids Ministry"
+					description="Sunday school, Kids Church, and Wednesday Kids Club for 1st through 5th grade. Built for kids to encounter Jesus."
+					imageUrl="https://images.unsplash.com/photo-1594913495702-0872744c6968?q=80&w=2370&auto=format&fit=crop"
+					altText="Kids learning together at Calvary"
+					href="/kids"
+				/>
+				<MinistryCard
+					title="Youth Ministry"
+					description="Friday nights, retreats, and small groups for middle and high schoolers. A space to wrestle with faith together."
+					imageUrl="https://images.unsplash.com/photo-1520857014576-2c4f4c972b57?q=80&w=2370&auto=format&fit=crop"
+					altText="Students gathered around a table"
+					href="/youth"
+				/>
+				<MinistryCard
+					title="Adult Ministries"
+					description="Discover Calvary, Journey Groups, ladies' ministry, and Bible study. Find your place to grow."
+					imageUrl="https://images.unsplash.com/photo-1565813086292-604790c8a97b?q=80&w=2370&auto=format&fit=crop"
+					altText="Adults in conversation over coffee"
+					href="/adults"
+				/>
 			</div>
 			<div class="mt-24 flex flex-col justify-center gap-6 md:flex-row">
 				<Button class="mb-0 py-6 text-lg font-normal tracking-wide transition-all duration-300"
