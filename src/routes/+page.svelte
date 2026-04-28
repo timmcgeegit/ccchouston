@@ -6,9 +6,9 @@
 	import OffsetCard from '$lib/components/design/OffsetCard.svelte';
 	import MinistryCard from '$lib/components/design/MinistryCard.svelte';
 	import AnnouncementCard from '$lib/components/design/AnnouncementCard.svelte';
-	import type { Announcement as AnnouncementType } from '$lib/types/announcements';
+	import type { PageData } from './$types';
 
-	export let data: { featuredAnnouncements: AnnouncementType[] };
+	let { data }: { data: PageData } = $props();
 </script>
 
 <main>

@@ -1,6 +1,9 @@
 import type { PageServerLoad } from './$types';
-import { announcementsByCategory } from '$lib/sample-data';
+import { getForMinistry, getUrgent } from '$lib/data/announcements';
 
 export const load: PageServerLoad = async () => {
-	return { featuredAnnouncements: announcementsByCategory('missions') };
+	return {
+		announcements: getForMinistry('missions'),
+		urgent: getUrgent({ scope: 'ministry', ministryKey: 'missions' })
+	};
 };

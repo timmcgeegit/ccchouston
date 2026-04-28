@@ -1,6 +1,8 @@
 import type { PageServerLoad } from './$types';
-import { featuredAnnouncements } from '$lib/sample-data';
+import { getFeatured } from '$lib/data/announcements';
 
 export const load: PageServerLoad = async () => {
-	return { featuredAnnouncements };
+	return {
+		featuredAnnouncements: getFeatured()
+	};
 };

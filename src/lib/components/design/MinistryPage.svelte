@@ -3,6 +3,7 @@
 	import SectionTitle from './SectionTitle.svelte';
 	import OffsetCard from './OffsetCard.svelte';
 	import AnnouncementCard from './AnnouncementCard.svelte';
+	import UrgentAnnouncementAlert from './UrgentAnnouncementAlert.svelte';
 	import { Button } from '$lib/components/ui/button';
 	import * as Accordion from '$lib/components/ui/accordion';
 	import type { MinistryPageContent } from '$lib/types/ministry-page';
@@ -11,9 +12,11 @@
 	interface Props {
 		content: MinistryPageContent;
 		announcements?: Announcement[];
+		/** Ministry-scoped urgent announcement, rendered above the hero. */
+		urgent?: Announcement | null;
 	}
 
-	let { content, announcements }: Props = $props();
+	let { content, announcements, urgent }: Props = $props();
 
 	const showAnnouncements = $derived(
 		Boolean(content.announcements && announcements && announcements.length > 0)
@@ -21,6 +24,9 @@
 </script>
 
 <main>
+	{#if urgent}
+		<UrgentAnnouncementAlert announcement={urgent} />
+	{/if}
 	<HeroSection
 		pageTitle={content.hero.title}
 		subtitle={content.hero.subtitle}

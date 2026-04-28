@@ -1,6 +1,9 @@
 <script lang="ts">
 	import MinistryPage from '$lib/components/design/MinistryPage.svelte';
 	import type { MinistryPageContent } from '$lib/types/ministry-page';
+	import type { PageData } from './$types';
+
+	let { data }: { data: PageData } = $props();
 
 	const content: MinistryPageContent = {
 		hero: {
@@ -72,4 +75,4 @@
 	};
 </script>
 
-<MinistryPage {content} />
+<MinistryPage {content} urgent={data.urgent} />

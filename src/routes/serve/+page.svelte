@@ -57,4 +57,4 @@
 	};
 </script>
 
-<MinistryPage {content} announcements={data.featuredAnnouncements} />
+<MinistryPage {content} announcements={data.announcements} urgent={data.urgent} />

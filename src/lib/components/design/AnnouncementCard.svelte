@@ -7,16 +7,22 @@
 	}
 
 	let { announcement }: Props = $props();
+
+	const isExternal = $derived(announcement.link_type === 'external');
 </script>
 
 <a
-	href={announcement.link}
+	href={announcement.link_target}
 	aria-label="{announcement.title}: {announcement.alt_text}"
 	class="group block aspect-square"
+	target={isExternal ? '_blank' : undefined}
+	rel={isExternal ? 'noopener noreferrer' : undefined}
 >
 	<Card.Root
-		class="relative h-full overflow-hidden bg-cover bg-center shadow-lg transition-shadow duration-500 hover:shadow-xl"
-		style="background-image: url('{announcement.img_square}');"
+		class="bg-primary relative h-full overflow-hidden bg-cover bg-center shadow-lg transition-shadow duration-500 hover:shadow-xl"
+		style={announcement.img_square
+			? `background-image: url('${announcement.img_square}');`
+			: undefined}
 	>
 		{#if announcement.optional_overlay_title}
 			<div
