@@ -20,7 +20,10 @@
 		},
 		{
 			label: 'About Us',
-			links: [{ label: 'About', href: '/about' }]
+			links: [
+				{ label: 'About', href: '/about' },
+				{ label: 'Become a Member', href: '/become-a-member' }
+			]
 		},
 		{
 			label: 'Get Involved',
@@ -95,9 +98,23 @@
 						</HoverCard.Root>
 					</li>
 					<li class="border-animate relative">
-						<a href="/about" class="text-foreground hover:text-primary active:text-primary"
-							>About Us</a
-						>
+						<HoverCard.Root openDelay={300}>
+							<HoverCard.Trigger class="hover:text-primary">About Us</HoverCard.Trigger>
+							<HoverCard.Content class="mt-3 translate-x-16">
+								<div class="container flex flex-col space-y-2 px-0">
+									<a
+										href="/about"
+										class="text-foreground hover:text-primary active:text-primary mx-4 transition-all duration-300"
+										>About</a
+									>
+									<a
+										href="/become-a-member"
+										class="text-foreground hover:text-primary active:text-primary mx-4 transition-all duration-300"
+										>Become a Member</a
+									>
+								</div>
+							</HoverCard.Content>
+						</HoverCard.Root>
 					</li>
 					<li class="border-animate relative">
 						<HoverCard.Root openDelay={300}>
