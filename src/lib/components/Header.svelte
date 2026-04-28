@@ -22,6 +22,7 @@
 			label: 'About Us',
 			links: [
 				{ label: 'About', href: '/about' },
+				{ label: 'Our History', href: '/our-history' },
 				{ label: 'Become a Member', href: '/become-a-member' }
 			]
 		},
@@ -106,6 +107,11 @@
 										href="/about"
 										class="text-foreground hover:text-primary active:text-primary mx-4 transition-all duration-300"
 										>About</a
+									>
+									<a
+										href="/our-history"
+										class="text-foreground hover:text-primary active:text-primary mx-4 transition-all duration-300"
+										>Our History</a
 									>
 									<a
 										href="/become-a-member"
